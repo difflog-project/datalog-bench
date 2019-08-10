@@ -1,1 +1,1 @@
-# datalog-bench
+# Positive Datalog Benchmarks & Rule Generation Code

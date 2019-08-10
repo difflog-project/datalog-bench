@@ -1,0 +1,1016 @@
+.type V
+
+.decl Rule(n: number)
+.input Rule
+
+.decl Edge(v0: V, v1: V)
+.input Edge
+
+.decl Path(v0: V, v1: V)
+.output Path
+
+.decl SCC(v0: V, v1: V)
+.output SCC
+
+
+Path(v0, v1) :- Rule(0), Edge(v0, v1).
+Path(v0, v1) :- Rule(1), Edge(v1, v0).
+Path(v0, v1) :- Rule(2), Path(v0, v1).
+Path(v0, v1) :- Rule(3), Path(v1, v0).
+Path(v0, v1) :- Rule(4), Edge(v1, v0), Edge(v1, v0).
+Path(v0, v1) :- Rule(5), Edge(v1, v0), Edge(v0, v1).
+Path(v0, v1) :- Rule(6), Edge(v0, v1), Edge(v1, v0).
+Path(v0, v1) :- Rule(7), Edge(v0, v1), Edge(v0, v1).
+Path(v0, v1) :- Rule(8), Edge(v2, v0), Edge(v1, v2).
+Path(v0, v1) :- Rule(9), Edge(v2, v1), Edge(v0, v2).
+Path(v0, v1) :- Rule(10), Edge(v1, v2), Edge(v2, v0).
+Path(v0, v1) :- Rule(11), Edge(v0, v2), Edge(v2, v1).
+Path(v0, v1) :- Rule(12), Edge(v0, v2), Edge(v1, v2).
+Path(v0, v1) :- Rule(13), Edge(v2, v0), Edge(v2, v1).
+Path(v0, v1) :- Rule(14), Edge(v2, v1), Edge(v2, v0).
+Path(v0, v1) :- Rule(15), Edge(v1, v2), Edge(v0, v2).
+Path(v0, v1) :- Rule(16), Edge(v1, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(17), Edge(v1, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(18), Edge(v0, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(19), Edge(v0, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(20), Edge(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(21), Edge(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(22), Edge(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(23), Edge(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(24), Edge(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(25), Edge(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(26), Edge(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(27), Edge(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(28), Path(v1, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(29), Path(v1, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(30), Path(v0, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(31), Path(v0, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(32), Path(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(33), Path(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(34), Path(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(35), Path(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(36), Path(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(37), Path(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(38), Path(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(39), Path(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(40), Edge(v0, v1), Edge(v0, v1), Edge(v1, v0).
+Path(v0, v1) :- Rule(41), Edge(v1, v0), Edge(v0, v1), Edge(v0, v1).
+Path(v0, v1) :- Rule(42), Edge(v1, v0), Edge(v0, v1), Edge(v1, v0).
+Path(v0, v1) :- Rule(43), Edge(v0, v1), Edge(v1, v0), Edge(v0, v1).
+Path(v0, v1) :- Rule(44), Edge(v0, v1), Edge(v1, v0), Edge(v1, v0).
+Path(v0, v1) :- Rule(45), Edge(v1, v0), Edge(v1, v0), Edge(v0, v1).
+Path(v0, v1) :- Rule(46), Edge(v1, v0), Edge(v1, v0), Edge(v1, v0).
+Path(v0, v1) :- Rule(47), Edge(v0, v1), Edge(v0, v1), Edge(v0, v1).
+Path(v0, v1) :- Rule(48), Edge(v0, v2), Edge(v0, v1), Edge(v0, v2).
+Path(v0, v1) :- Rule(49), Edge(v0, v2), Edge(v0, v1), Edge(v2, v0).
+Path(v0, v1) :- Rule(50), Edge(v2, v0), Edge(v1, v0), Edge(v0, v2).
+Path(v0, v1) :- Rule(51), Edge(v2, v0), Edge(v1, v0), Edge(v2, v0).
+Path(v0, v1) :- Rule(52), Edge(v0, v2), Edge(v0, v2), Edge(v0, v1).
+Path(v0, v1) :- Rule(53), Edge(v0, v1), Edge(v2, v0), Edge(v0, v2).
+Path(v0, v1) :- Rule(54), Edge(v0, v1), Edge(v2, v0), Edge(v2, v0).
+Path(v0, v1) :- Rule(55), Edge(v1, v0), Edge(v0, v2), Edge(v0, v2).
+Path(v0, v1) :- Rule(56), Edge(v1, v0), Edge(v0, v2), Edge(v2, v0).
+Path(v0, v1) :- Rule(57), Edge(v2, v0), Edge(v2, v0), Edge(v0, v1).
+Path(v0, v1) :- Rule(58), Edge(v0, v2), Edge(v0, v2), Edge(v1, v0).
+Path(v0, v1) :- Rule(59), Edge(v2, v0), Edge(v2, v0), Edge(v1, v0).
+Path(v0, v1) :- Rule(60), Edge(v2, v0), Edge(v0, v1), Edge(v0, v2).
+Path(v0, v1) :- Rule(61), Edge(v2, v0), Edge(v0, v1), Edge(v2, v0).
+Path(v0, v1) :- Rule(62), Edge(v2, v0), Edge(v0, v2), Edge(v0, v1).
+Path(v0, v1) :- Rule(63), Edge(v2, v0), Edge(v0, v2), Edge(v1, v0).
+Path(v0, v1) :- Rule(64), Edge(v0, v2), Edge(v1, v0), Edge(v0, v2).
+Path(v0, v1) :- Rule(65), Edge(v0, v2), Edge(v1, v0), Edge(v2, v0).
+Path(v0, v1) :- Rule(66), Edge(v0, v2), Edge(v2, v0), Edge(v0, v1).
+Path(v0, v1) :- Rule(67), Edge(v0, v1), Edge(v0, v2), Edge(v0, v2).
+Path(v0, v1) :- Rule(68), Edge(v0, v1), Edge(v0, v2), Edge(v2, v0).
+Path(v0, v1) :- Rule(69), Edge(v1, v0), Edge(v2, v0), Edge(v0, v2).
+Path(v0, v1) :- Rule(70), Edge(v1, v0), Edge(v2, v0), Edge(v2, v0).
+Path(v0, v1) :- Rule(71), Edge(v0, v2), Edge(v2, v0), Edge(v1, v0).
+Path(v0, v1) :- Rule(72), Edge(v1, v0), Edge(v0, v2), Edge(v1, v2).
+Path(v0, v1) :- Rule(73), Edge(v1, v2), Edge(v1, v0), Edge(v2, v0).
+Path(v0, v1) :- Rule(74), Edge(v1, v0), Edge(v1, v2), Edge(v0, v2).
+Path(v0, v1) :- Rule(75), Edge(v2, v1), Edge(v0, v2), Edge(v1, v0).
+Path(v0, v1) :- Rule(76), Edge(v1, v2), Edge(v0, v2), Edge(v1, v0).
+Path(v0, v1) :- Rule(77), Edge(v2, v1), Edge(v0, v1), Edge(v0, v2).
+Path(v0, v1) :- Rule(78), Edge(v2, v0), Edge(v1, v0), Edge(v1, v2).
+Path(v0, v1) :- Rule(79), Edge(v1, v2), Edge(v0, v1), Edge(v0, v2).
+Path(v0, v1) :- Rule(80), Edge(v0, v2), Edge(v0, v1), Edge(v2, v1).
+Path(v0, v1) :- Rule(81), Edge(v1, v2), Edge(v2, v0), Edge(v0, v1).
+Path(v0, v1) :- Rule(82), Edge(v2, v0), Edge(v1, v2), Edge(v0, v1).
+Path(v0, v1) :- Rule(83), Edge(v0, v1), Edge(v2, v0), Edge(v2, v1).
+Path(v0, v1) :- Rule(84), Edge(v1, v0), Edge(v0, v2), Edge(v2, v1).
+Path(v0, v1) :- Rule(85), Edge(v2, v0), Edge(v2, v1), Edge(v0, v1).
+Path(v0, v1) :- Rule(86), Edge(v0, v1), Edge(v2, v1), Edge(v0, v2).
+Path(v0, v1) :- Rule(87), Edge(v0, v1), Edge(v1, v2), Edge(v0, v2).
+Path(v0, v1) :- Rule(88), Edge(v1, v0), Edge(v2, v1), Edge(v0, v2).
+Path(v0, v1) :- Rule(89), Edge(v1, v2), Edge(v2, v0), Edge(v1, v0).
+Path(v0, v1) :- Rule(90), Edge(v2, v1), Edge(v1, v0), Edge(v0, v2).
+Path(v0, v1) :- Rule(91), Edge(v2, v0), Edge(v1, v2), Edge(v1, v0).
+Path(v0, v1) :- Rule(92), Edge(v2, v0), Edge(v2, v1), Edge(v1, v0).
+Path(v0, v1) :- Rule(93), Edge(v2, v0), Edge(v1, v0), Edge(v2, v1).
+Path(v0, v1) :- Rule(94), Edge(v2, v0), Edge(v0, v1), Edge(v1, v2).
+Path(v0, v1) :- Rule(95), Edge(v1, v2), Edge(v1, v0), Edge(v0, v2).
+Path(v0, v1) :- Rule(96), Edge(v0, v2), Edge(v1, v0), Edge(v1, v2).
+Path(v0, v1) :- Rule(97), Edge(v2, v1), Edge(v2, v0), Edge(v0, v1).
+Path(v0, v1) :- Rule(98), Edge(v2, v1), Edge(v0, v1), Edge(v2, v0).
+Path(v0, v1) :- Rule(99), Edge(v0, v1), Edge(v0, v2), Edge(v1, v2).
+Path(v0, v1) :- Rule(100), Edge(v0, v2), Edge(v1, v2), Edge(v0, v1).
+Path(v0, v1) :- Rule(101), Edge(v1, v0), Edge(v1, v2), Edge(v2, v0).
+Path(v0, v1) :- Rule(102), Edge(v0, v2), Edge(v2, v1), Edge(v0, v1).
+Path(v0, v1) :- Rule(103), Edge(v0, v1), Edge(v2, v1), Edge(v2, v0).
+Path(v0, v1) :- Rule(104), Edge(v1, v0), Edge(v2, v0), Edge(v1, v2).
+Path(v0, v1) :- Rule(105), Edge(v0, v1), Edge(v1, v2), Edge(v2, v0).
+Path(v0, v1) :- Rule(106), Edge(v1, v2), Edge(v0, v1), Edge(v2, v0).
+Path(v0, v1) :- Rule(107), Edge(v2, v1), Edge(v2, v0), Edge(v1, v0).
+Path(v0, v1) :- Rule(108), Edge(v2, v0), Edge(v0, v1), Edge(v2, v1).
+Path(v0, v1) :- Rule(109), Edge(v0, v2), Edge(v1, v2), Edge(v1, v0).
+Path(v0, v1) :- Rule(110), Edge(v0, v2), Edge(v2, v1), Edge(v1, v0).
+Path(v0, v1) :- Rule(111), Edge(v0, v2), Edge(v1, v0), Edge(v2, v1).
+Path(v0, v1) :- Rule(112), Edge(v2, v1), Edge(v0, v2), Edge(v0, v1).
+Path(v0, v1) :- Rule(113), Edge(v0, v2), Edge(v0, v1), Edge(v1, v2).
+Path(v0, v1) :- Rule(114), Edge(v1, v2), Edge(v0, v2), Edge(v0, v1).
+Path(v0, v1) :- Rule(115), Edge(v2, v1), Edge(v1, v0), Edge(v2, v0).
+Path(v0, v1) :- Rule(116), Edge(v0, v1), Edge(v2, v0), Edge(v1, v2).
+Path(v0, v1) :- Rule(117), Edge(v0, v1), Edge(v0, v2), Edge(v2, v1).
+Path(v0, v1) :- Rule(118), Edge(v1, v0), Edge(v2, v0), Edge(v2, v1).
+Path(v0, v1) :- Rule(119), Edge(v1, v0), Edge(v2, v1), Edge(v2, v0).
+Path(v0, v1) :- Rule(120), Edge(v2, v1), Edge(v0, v2), Edge(v0, v2).
+Path(v0, v1) :- Rule(121), Edge(v2, v1), Edge(v0, v2), Edge(v2, v0).
+Path(v0, v1) :- Rule(122), Edge(v0, v2), Edge(v1, v2), Edge(v0, v2).
+Path(v0, v1) :- Rule(123), Edge(v0, v2), Edge(v1, v2), Edge(v2, v0).
+Path(v0, v1) :- Rule(124), Edge(v2, v0), Edge(v0, v2), Edge(v2, v1).
+Path(v0, v1) :- Rule(125), Edge(v0, v2), Edge(v2, v1), Edge(v0, v2).
+Path(v0, v1) :- Rule(126), Edge(v0, v2), Edge(v2, v1), Edge(v2, v0).
+Path(v0, v1) :- Rule(127), Edge(v2, v0), Edge(v0, v2), Edge(v1, v2).
+Path(v0, v1) :- Rule(128), Edge(v1, v2), Edge(v0, v2), Edge(v0, v2).
+Path(v0, v1) :- Rule(129), Edge(v1, v2), Edge(v0, v2), Edge(v2, v0).
+Path(v0, v1) :- Rule(130), Edge(v0, v2), Edge(v2, v0), Edge(v2, v1).
+Path(v0, v1) :- Rule(131), Edge(v0, v2), Edge(v2, v0), Edge(v1, v2).
+Path(v0, v1) :- Rule(132), Edge(v2, v0), Edge(v1, v2), Edge(v0, v2).
+Path(v0, v1) :- Rule(133), Edge(v2, v0), Edge(v1, v2), Edge(v2, v0).
+Path(v0, v1) :- Rule(134), Edge(v2, v0), Edge(v2, v1), Edge(v0, v2).
+Path(v0, v1) :- Rule(135), Edge(v2, v0), Edge(v2, v1), Edge(v2, v0).
+Path(v0, v1) :- Rule(136), Edge(v1, v2), Edge(v2, v0), Edge(v0, v2).
+Path(v0, v1) :- Rule(137), Edge(v1, v2), Edge(v2, v0), Edge(v2, v0).
+Path(v0, v1) :- Rule(138), Edge(v0, v2), Edge(v0, v2), Edge(v2, v1).
+Path(v0, v1) :- Rule(139), Edge(v2, v1), Edge(v2, v0), Edge(v0, v2).
+Path(v0, v1) :- Rule(140), Edge(v2, v1), Edge(v2, v0), Edge(v2, v0).
+Path(v0, v1) :- Rule(141), Edge(v2, v0), Edge(v2, v0), Edge(v2, v1).
+Path(v0, v1) :- Rule(142), Edge(v0, v2), Edge(v0, v2), Edge(v1, v2).
+Path(v0, v1) :- Rule(143), Edge(v2, v0), Edge(v2, v0), Edge(v1, v2).
+Path(v0, v1) :- Rule(144), Edge(v1, v2), Edge(v0, v1), Edge(v2, v1).
+Path(v0, v1) :- Rule(145), Edge(v2, v1), Edge(v1, v2), Edge(v0, v1).
+Path(v0, v1) :- Rule(146), Edge(v0, v1), Edge(v2, v1), Edge(v1, v2).
+Path(v0, v1) :- Rule(147), Edge(v1, v2), Edge(v2, v1), Edge(v0, v1).
+Path(v0, v1) :- Rule(148), Edge(v0, v1), Edge(v1, v2), Edge(v1, v2).
+Path(v0, v1) :- Rule(149), Edge(v1, v0), Edge(v2, v1), Edge(v2, v1).
+Path(v0, v1) :- Rule(150), Edge(v1, v2), Edge(v1, v2), Edge(v0, v1).
+Path(v0, v1) :- Rule(151), Edge(v1, v2), Edge(v0, v1), Edge(v1, v2).
+Path(v0, v1) :- Rule(152), Edge(v2, v1), Edge(v1, v2), Edge(v1, v0).
+Path(v0, v1) :- Rule(153), Edge(v1, v2), Edge(v2, v1), Edge(v1, v0).
+Path(v0, v1) :- Rule(154), Edge(v1, v0), Edge(v2, v1), Edge(v1, v2).
+Path(v0, v1) :- Rule(155), Edge(v1, v2), Edge(v1, v2), Edge(v1, v0).
+Path(v0, v1) :- Rule(156), Edge(v1, v2), Edge(v1, v0), Edge(v2, v1).
+Path(v0, v1) :- Rule(157), Edge(v2, v1), Edge(v2, v1), Edge(v0, v1).
+Path(v0, v1) :- Rule(158), Edge(v2, v1), Edge(v0, v1), Edge(v2, v1).
+Path(v0, v1) :- Rule(159), Edge(v1, v2), Edge(v1, v0), Edge(v1, v2).
+Path(v0, v1) :- Rule(160), Edge(v2, v1), Edge(v2, v1), Edge(v1, v0).
+Path(v0, v1) :- Rule(161), Edge(v2, v1), Edge(v0, v1), Edge(v1, v2).
+Path(v0, v1) :- Rule(162), Edge(v1, v0), Edge(v1, v2), Edge(v2, v1).
+Path(v0, v1) :- Rule(163), Edge(v2, v1), Edge(v1, v0), Edge(v2, v1).
+Path(v0, v1) :- Rule(164), Edge(v1, v0), Edge(v1, v2), Edge(v1, v2).
+Path(v0, v1) :- Rule(165), Edge(v2, v1), Edge(v1, v0), Edge(v1, v2).
+Path(v0, v1) :- Rule(166), Edge(v0, v1), Edge(v2, v1), Edge(v2, v1).
+Path(v0, v1) :- Rule(167), Edge(v0, v1), Edge(v1, v2), Edge(v2, v1).
+Path(v0, v1) :- Rule(168), Edge(v0, v2), Edge(v1, v2), Edge(v1, v2).
+Path(v0, v1) :- Rule(169), Edge(v0, v2), Edge(v2, v1), Edge(v1, v2).
+Path(v0, v1) :- Rule(170), Edge(v1, v2), Edge(v2, v0), Edge(v1, v2).
+Path(v0, v1) :- Rule(171), Edge(v1, v2), Edge(v0, v2), Edge(v2, v1).
+Path(v0, v1) :- Rule(172), Edge(v2, v1), Edge(v1, v2), Edge(v0, v2).
+Path(v0, v1) :- Rule(173), Edge(v1, v2), Edge(v2, v1), Edge(v2, v0).
+Path(v0, v1) :- Rule(174), Edge(v1, v2), Edge(v1, v2), Edge(v2, v0).
+Path(v0, v1) :- Rule(175), Edge(v2, v0), Edge(v1, v2), Edge(v2, v1).
+Path(v0, v1) :- Rule(176), Edge(v2, v0), Edge(v2, v1), Edge(v2, v1).
+Path(v0, v1) :- Rule(177), Edge(v1, v2), Edge(v2, v0), Edge(v2, v1).
+Path(v0, v1) :- Rule(178), Edge(v2, v0), Edge(v1, v2), Edge(v1, v2).
+Path(v0, v1) :- Rule(179), Edge(v1, v2), Edge(v2, v1), Edge(v0, v2).
+Path(v0, v1) :- Rule(180), Edge(v2, v0), Edge(v2, v1), Edge(v1, v2).
+Path(v0, v1) :- Rule(181), Edge(v2, v1), Edge(v1, v2), Edge(v2, v0).
+Path(v0, v1) :- Rule(182), Edge(v1, v2), Edge(v1, v2), Edge(v0, v2).
+Path(v0, v1) :- Rule(183), Edge(v2, v1), Edge(v2, v0), Edge(v2, v1).
+Path(v0, v1) :- Rule(184), Edge(v2, v1), Edge(v2, v1), Edge(v0, v2).
+Path(v0, v1) :- Rule(185), Edge(v2, v1), Edge(v2, v0), Edge(v1, v2).
+Path(v0, v1) :- Rule(186), Edge(v1, v2), Edge(v0, v2), Edge(v1, v2).
+Path(v0, v1) :- Rule(187), Edge(v2, v1), Edge(v2, v1), Edge(v2, v0).
+Path(v0, v1) :- Rule(188), Edge(v2, v1), Edge(v0, v2), Edge(v2, v1).
+Path(v0, v1) :- Rule(189), Edge(v0, v2), Edge(v1, v2), Edge(v2, v1).
+Path(v0, v1) :- Rule(190), Edge(v0, v2), Edge(v2, v1), Edge(v2, v1).
+Path(v0, v1) :- Rule(191), Edge(v2, v1), Edge(v0, v2), Edge(v1, v2).
+Path(v0, v1) :- Rule(192), Edge(v2, v3), Edge(v0, v3), Edge(v2, v1).
+Path(v0, v1) :- Rule(193), Edge(v2, v1), Edge(v2, v3), Edge(v3, v0).
+Path(v0, v1) :- Rule(194), Edge(v2, v3), Edge(v2, v0), Edge(v3, v1).
+Path(v0, v1) :- Rule(195), Edge(v2, v3), Edge(v2, v1), Edge(v3, v0).
+Path(v0, v1) :- Rule(196), Edge(v2, v3), Edge(v1, v2), Edge(v3, v0).
+Path(v0, v1) :- Rule(197), Edge(v1, v2), Edge(v0, v3), Edge(v2, v3).
+Path(v0, v1) :- Rule(198), Edge(v2, v3), Edge(v1, v3), Edge(v0, v2).
+Path(v0, v1) :- Rule(199), Edge(v0, v2), Edge(v2, v3), Edge(v3, v1).
+Path(v0, v1) :- Rule(200), Edge(v2, v1), Edge(v3, v2), Edge(v0, v3).
+Path(v0, v1) :- Rule(201), Edge(v2, v3), Edge(v2, v3), Edge(v1, v0).
+Path(v0, v1) :- Rule(202), Edge(v2, v0), Edge(v2, v3), Edge(v1, v3).
+Path(v0, v1) :- Rule(203), Edge(v1, v2), Edge(v3, v2), Edge(v3, v0).
+Path(v0, v1) :- Rule(204), Edge(v2, v1), Edge(v0, v3), Edge(v3, v2).
+Path(v0, v1) :- Rule(205), Edge(v2, v3), Edge(v3, v0), Edge(v1, v2).
+Path(v0, v1) :- Rule(206), Edge(v2, v1), Edge(v3, v0), Edge(v3, v2).
+Path(v0, v1) :- Rule(207), Edge(v2, v3), Edge(v3, v1), Edge(v2, v0).
+Path(v0, v1) :- Rule(208), Edge(v2, v3), Edge(v0, v2), Edge(v1, v3).
+Path(v0, v1) :- Rule(209), Edge(v2, v1), Edge(v0, v3), Edge(v2, v3).
+Path(v0, v1) :- Rule(210), Edge(v2, v1), Edge(v3, v0), Edge(v2, v3).
+Path(v0, v1) :- Rule(211), Edge(v2, v0), Edge(v3, v1), Edge(v3, v2).
+Path(v0, v1) :- Rule(212), Edge(v0, v2), Edge(v3, v2), Edge(v1, v3).
+Path(v0, v1) :- Rule(213), Edge(v2, v0), Edge(v3, v1), Edge(v2, v3).
+Path(v0, v1) :- Rule(214), Edge(v0, v1), Edge(v2, v3), Edge(v3, v2).
+Path(v0, v1) :- Rule(215), Edge(v0, v1), Edge(v2, v3), Edge(v2, v3).
+Path(v0, v1) :- Rule(216), Edge(v1, v2), Edge(v3, v0), Edge(v3, v2).
+Path(v0, v1) :- Rule(217), Edge(v2, v1), Edge(v3, v2), Edge(v3, v0).
+Path(v0, v1) :- Rule(218), Edge(v1, v0), Edge(v2, v3), Edge(v2, v3).
+Path(v0, v1) :- Rule(219), Edge(v2, v3), Edge(v2, v3), Edge(v0, v1).
+Path(v0, v1) :- Rule(220), Edge(v2, v0), Edge(v3, v2), Edge(v3, v1).
+Path(v0, v1) :- Rule(221), Edge(v2, v3), Edge(v3, v1), Edge(v0, v2).
+Path(v0, v1) :- Rule(222), Edge(v2, v3), Edge(v3, v2), Edge(v1, v0).
+Path(v0, v1) :- Rule(223), Edge(v1, v2), Edge(v2, v3), Edge(v0, v3).
+Path(v0, v1) :- Rule(224), Edge(v2, v3), Edge(v0, v3), Edge(v1, v2).
+Path(v0, v1) :- Rule(225), Edge(v2, v3), Edge(v2, v0), Edge(v1, v3).
+Path(v0, v1) :- Rule(226), Edge(v2, v0), Edge(v1, v3), Edge(v3, v2).
+Path(v0, v1) :- Rule(227), Edge(v0, v2), Edge(v2, v3), Edge(v1, v3).
+Path(v0, v1) :- Rule(228), Edge(v2, v0), Edge(v1, v3), Edge(v2, v3).
+Path(v0, v1) :- Rule(229), Edge(v2, v3), Edge(v0, v1), Edge(v3, v2).
+Path(v0, v1) :- Rule(230), Edge(v2, v3), Edge(v0, v1), Edge(v2, v3).
+Path(v0, v1) :- Rule(231), Edge(v0, v2), Edge(v3, v1), Edge(v3, v2).
+Path(v0, v1) :- Rule(232), Edge(v0, v2), Edge(v3, v1), Edge(v2, v3).
+Path(v0, v1) :- Rule(233), Edge(v2, v3), Edge(v3, v0), Edge(v2, v1).
+Path(v0, v1) :- Rule(234), Edge(v1, v2), Edge(v0, v3), Edge(v3, v2).
+Path(v0, v1) :- Rule(235), Edge(v2, v3), Edge(v3, v2), Edge(v0, v1).
+Path(v0, v1) :- Rule(236), Edge(v2, v0), Edge(v2, v3), Edge(v3, v1).
+Path(v0, v1) :- Rule(237), Edge(v2, v3), Edge(v0, v2), Edge(v3, v1).
+Path(v0, v1) :- Rule(238), Edge(v1, v2), Edge(v3, v0), Edge(v2, v3).
+Path(v0, v1) :- Rule(239), Edge(v0, v2), Edge(v3, v2), Edge(v3, v1).
+Path(v0, v1) :- Rule(240), Edge(v2, v1), Edge(v2, v3), Edge(v0, v3).
+Path(v0, v1) :- Rule(241), Edge(v2, v0), Edge(v3, v2), Edge(v1, v3).
+Path(v0, v1) :- Rule(242), Edge(v1, v2), Edge(v2, v3), Edge(v3, v0).
+Path(v0, v1) :- Rule(243), Edge(v1, v2), Edge(v3, v2), Edge(v0, v3).
+Path(v0, v1) :- Rule(244), Edge(v2, v3), Edge(v1, v3), Edge(v2, v0).
+Path(v0, v1) :- Rule(245), Edge(v2, v3), Edge(v2, v1), Edge(v0, v3).
+Path(v0, v1) :- Rule(246), Edge(v2, v3), Edge(v1, v2), Edge(v0, v3).
+Path(v0, v1) :- Rule(247), Edge(v2, v3), Edge(v1, v0), Edge(v3, v2).
+Path(v0, v1) :- Rule(248), Edge(v0, v2), Edge(v1, v3), Edge(v3, v2).
+Path(v0, v1) :- Rule(249), Edge(v2, v3), Edge(v1, v0), Edge(v2, v3).
+Path(v0, v1) :- Rule(250), Edge(v1, v0), Edge(v2, v3), Edge(v3, v2).
+Path(v0, v1) :- Rule(251), Edge(v0, v2), Edge(v1, v3), Edge(v2, v3).
+Path(v0, v1) :- Rule(252), Edge(v0, v1), Edge(v0, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(253), Edge(v1, v0), Edge(v0, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(254), Edge(v1, v0), Edge(v0, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(255), Edge(v0, v1), Edge(v1, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(256), Edge(v0, v1), Edge(v1, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(257), Edge(v1, v0), Edge(v1, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(258), Edge(v1, v0), Edge(v1, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(259), Edge(v0, v1), Edge(v0, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(260), Edge(v0, v2), Edge(v0, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(261), Edge(v0, v2), Edge(v0, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(262), Edge(v2, v0), Edge(v1, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(263), Edge(v2, v0), Edge(v1, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(264), Edge(v0, v2), Edge(v0, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(265), Edge(v0, v1), Edge(v2, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(266), Edge(v0, v1), Edge(v2, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(267), Edge(v1, v0), Edge(v0, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(268), Edge(v1, v0), Edge(v0, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(269), Edge(v2, v0), Edge(v2, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(270), Edge(v0, v2), Edge(v0, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(271), Edge(v2, v0), Edge(v2, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(272), Edge(v2, v0), Edge(v0, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(273), Edge(v2, v0), Edge(v0, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(274), Edge(v2, v0), Edge(v0, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(275), Edge(v2, v0), Edge(v0, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(276), Edge(v0, v2), Edge(v1, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(277), Edge(v0, v2), Edge(v1, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(278), Edge(v0, v2), Edge(v2, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(279), Edge(v0, v1), Edge(v0, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(280), Edge(v0, v1), Edge(v0, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(281), Edge(v1, v0), Edge(v2, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(282), Edge(v1, v0), Edge(v2, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(283), Edge(v0, v2), Edge(v2, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(284), Edge(v1, v0), Edge(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(285), Edge(v1, v2), Edge(v1, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(286), Edge(v1, v0), Edge(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(287), Edge(v2, v1), Edge(v0, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(288), Edge(v1, v2), Edge(v0, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(289), Edge(v2, v1), Edge(v0, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(290), Edge(v2, v0), Edge(v1, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(291), Edge(v1, v2), Edge(v0, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(292), Edge(v0, v2), Edge(v0, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(293), Edge(v1, v2), Edge(v2, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(294), Edge(v2, v0), Edge(v1, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(295), Edge(v0, v1), Edge(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(296), Edge(v1, v0), Edge(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(297), Edge(v2, v0), Edge(v2, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(298), Edge(v0, v1), Edge(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(299), Edge(v0, v1), Edge(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(300), Edge(v1, v0), Edge(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(301), Edge(v1, v2), Edge(v2, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(302), Edge(v2, v1), Edge(v1, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(303), Edge(v2, v0), Edge(v1, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(304), Edge(v2, v0), Edge(v2, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(305), Edge(v2, v0), Edge(v1, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(306), Edge(v2, v0), Edge(v0, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(307), Edge(v1, v2), Edge(v1, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(308), Edge(v0, v2), Edge(v1, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(309), Edge(v2, v1), Edge(v2, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(310), Edge(v2, v1), Edge(v0, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(311), Edge(v0, v1), Edge(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(312), Edge(v0, v2), Edge(v1, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(313), Edge(v1, v0), Edge(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(314), Edge(v0, v2), Edge(v2, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(315), Edge(v0, v1), Edge(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(316), Edge(v1, v0), Edge(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(317), Edge(v0, v1), Edge(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(318), Edge(v1, v2), Edge(v0, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(319), Edge(v2, v1), Edge(v2, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(320), Edge(v2, v0), Edge(v0, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(321), Edge(v0, v2), Edge(v1, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(322), Edge(v0, v2), Edge(v2, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(323), Edge(v0, v2), Edge(v1, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(324), Edge(v2, v1), Edge(v0, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(325), Edge(v0, v2), Edge(v0, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(326), Edge(v1, v2), Edge(v0, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(327), Edge(v2, v1), Edge(v1, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(328), Edge(v0, v1), Edge(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(329), Edge(v0, v1), Edge(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(330), Edge(v1, v0), Edge(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(331), Edge(v1, v0), Edge(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(332), Edge(v2, v1), Edge(v0, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(333), Edge(v2, v1), Edge(v0, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(334), Edge(v0, v2), Edge(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(335), Edge(v0, v2), Edge(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(336), Edge(v2, v0), Edge(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(337), Edge(v0, v2), Edge(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(338), Edge(v0, v2), Edge(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(339), Edge(v2, v0), Edge(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(340), Edge(v1, v2), Edge(v0, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(341), Edge(v1, v2), Edge(v0, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(342), Edge(v0, v2), Edge(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(343), Edge(v0, v2), Edge(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(344), Edge(v2, v0), Edge(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(345), Edge(v2, v0), Edge(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(346), Edge(v2, v0), Edge(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(347), Edge(v2, v0), Edge(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(348), Edge(v1, v2), Edge(v2, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(349), Edge(v1, v2), Edge(v2, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(350), Edge(v0, v2), Edge(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(351), Edge(v2, v1), Edge(v2, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(352), Edge(v2, v1), Edge(v2, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(353), Edge(v2, v0), Edge(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(354), Edge(v0, v2), Edge(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(355), Edge(v2, v0), Edge(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(356), Edge(v1, v2), Edge(v0, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(357), Edge(v2, v1), Edge(v1, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(358), Edge(v0, v1), Edge(v2, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(359), Edge(v1, v2), Edge(v2, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(360), Edge(v0, v1), Edge(v1, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(361), Edge(v1, v0), Edge(v2, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(362), Edge(v1, v2), Edge(v1, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(363), Edge(v1, v2), Edge(v0, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(364), Edge(v2, v1), Edge(v1, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(365), Edge(v1, v2), Edge(v2, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(366), Edge(v1, v0), Edge(v2, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(367), Edge(v1, v2), Edge(v1, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(368), Edge(v1, v2), Edge(v1, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(369), Edge(v2, v1), Edge(v2, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(370), Edge(v2, v1), Edge(v0, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(371), Edge(v1, v2), Edge(v1, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(372), Edge(v2, v1), Edge(v2, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(373), Edge(v2, v1), Edge(v0, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(374), Edge(v1, v0), Edge(v1, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(375), Edge(v2, v1), Edge(v1, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(376), Edge(v1, v0), Edge(v1, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(377), Edge(v2, v1), Edge(v1, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(378), Edge(v0, v1), Edge(v2, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(379), Edge(v0, v1), Edge(v1, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(380), Edge(v0, v2), Edge(v1, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(381), Edge(v0, v2), Edge(v2, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(382), Edge(v1, v2), Edge(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(383), Edge(v1, v2), Edge(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(384), Edge(v2, v1), Edge(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(385), Edge(v1, v2), Edge(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(386), Edge(v1, v2), Edge(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(387), Edge(v2, v0), Edge(v1, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(388), Edge(v2, v0), Edge(v2, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(389), Edge(v1, v2), Edge(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(390), Edge(v2, v0), Edge(v1, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(391), Edge(v1, v2), Edge(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(392), Edge(v2, v0), Edge(v2, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(393), Edge(v2, v1), Edge(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(394), Edge(v1, v2), Edge(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(395), Edge(v2, v1), Edge(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(396), Edge(v2, v1), Edge(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(397), Edge(v2, v1), Edge(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(398), Edge(v1, v2), Edge(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(399), Edge(v2, v1), Edge(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(400), Edge(v2, v1), Edge(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(401), Edge(v0, v2), Edge(v1, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(402), Edge(v0, v2), Edge(v2, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(403), Edge(v2, v1), Edge(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(404), Edge(v2, v3), Edge(v0, v3), Path(v2, v1).
+Path(v0, v1) :- Rule(405), Edge(v2, v1), Edge(v2, v3), Path(v3, v0).
+Path(v0, v1) :- Rule(406), Edge(v2, v3), Edge(v2, v0), Path(v3, v1).
+Path(v0, v1) :- Rule(407), Edge(v2, v3), Edge(v2, v1), Path(v3, v0).
+Path(v0, v1) :- Rule(408), Edge(v2, v3), Edge(v1, v2), Path(v3, v0).
+Path(v0, v1) :- Rule(409), Edge(v1, v2), Edge(v0, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(410), Edge(v2, v3), Edge(v1, v3), Path(v0, v2).
+Path(v0, v1) :- Rule(411), Edge(v0, v2), Edge(v2, v3), Path(v3, v1).
+Path(v0, v1) :- Rule(412), Edge(v2, v1), Edge(v3, v2), Path(v0, v3).
+Path(v0, v1) :- Rule(413), Edge(v2, v3), Edge(v2, v3), Path(v1, v0).
+Path(v0, v1) :- Rule(414), Edge(v2, v0), Edge(v2, v3), Path(v1, v3).
+Path(v0, v1) :- Rule(415), Edge(v1, v2), Edge(v3, v2), Path(v3, v0).
+Path(v0, v1) :- Rule(416), Edge(v2, v1), Edge(v0, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(417), Edge(v2, v3), Edge(v3, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(418), Edge(v2, v1), Edge(v3, v0), Path(v3, v2).
+Path(v0, v1) :- Rule(419), Edge(v2, v3), Edge(v3, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(420), Edge(v2, v3), Edge(v0, v2), Path(v1, v3).
+Path(v0, v1) :- Rule(421), Edge(v2, v1), Edge(v0, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(422), Edge(v2, v1), Edge(v3, v0), Path(v2, v3).
+Path(v0, v1) :- Rule(423), Edge(v2, v0), Edge(v3, v1), Path(v3, v2).
+Path(v0, v1) :- Rule(424), Edge(v0, v2), Edge(v3, v2), Path(v1, v3).
+Path(v0, v1) :- Rule(425), Edge(v2, v0), Edge(v3, v1), Path(v2, v3).
+Path(v0, v1) :- Rule(426), Edge(v0, v1), Edge(v2, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(427), Edge(v0, v1), Edge(v2, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(428), Edge(v1, v2), Edge(v3, v0), Path(v3, v2).
+Path(v0, v1) :- Rule(429), Edge(v2, v1), Edge(v3, v2), Path(v3, v0).
+Path(v0, v1) :- Rule(430), Edge(v1, v0), Edge(v2, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(431), Edge(v2, v3), Edge(v2, v3), Path(v0, v1).
+Path(v0, v1) :- Rule(432), Edge(v2, v0), Edge(v3, v2), Path(v3, v1).
+Path(v0, v1) :- Rule(433), Edge(v2, v3), Edge(v3, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(434), Edge(v2, v3), Edge(v3, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(435), Edge(v1, v2), Edge(v2, v3), Path(v0, v3).
+Path(v0, v1) :- Rule(436), Edge(v2, v3), Edge(v0, v3), Path(v1, v2).
+Path(v0, v1) :- Rule(437), Edge(v2, v3), Edge(v2, v0), Path(v1, v3).
+Path(v0, v1) :- Rule(438), Edge(v2, v0), Edge(v1, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(439), Edge(v0, v2), Edge(v2, v3), Path(v1, v3).
+Path(v0, v1) :- Rule(440), Edge(v2, v0), Edge(v1, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(441), Edge(v2, v3), Edge(v0, v1), Path(v3, v2).
+Path(v0, v1) :- Rule(442), Edge(v2, v3), Edge(v0, v1), Path(v2, v3).
+Path(v0, v1) :- Rule(443), Edge(v0, v2), Edge(v3, v1), Path(v3, v2).
+Path(v0, v1) :- Rule(444), Edge(v0, v2), Edge(v3, v1), Path(v2, v3).
+Path(v0, v1) :- Rule(445), Edge(v2, v3), Edge(v3, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(446), Edge(v1, v2), Edge(v0, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(447), Edge(v2, v3), Edge(v3, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(448), Edge(v2, v0), Edge(v2, v3), Path(v3, v1).
+Path(v0, v1) :- Rule(449), Edge(v2, v3), Edge(v0, v2), Path(v3, v1).
+Path(v0, v1) :- Rule(450), Edge(v1, v2), Edge(v3, v0), Path(v2, v3).
+Path(v0, v1) :- Rule(451), Edge(v0, v2), Edge(v3, v2), Path(v3, v1).
+Path(v0, v1) :- Rule(452), Edge(v2, v1), Edge(v2, v3), Path(v0, v3).
+Path(v0, v1) :- Rule(453), Edge(v2, v0), Edge(v3, v2), Path(v1, v3).
+Path(v0, v1) :- Rule(454), Edge(v1, v2), Edge(v2, v3), Path(v3, v0).
+Path(v0, v1) :- Rule(455), Edge(v1, v2), Edge(v3, v2), Path(v0, v3).
+Path(v0, v1) :- Rule(456), Edge(v2, v3), Edge(v1, v3), Path(v2, v0).
+Path(v0, v1) :- Rule(457), Edge(v2, v3), Edge(v2, v1), Path(v0, v3).
+Path(v0, v1) :- Rule(458), Edge(v2, v3), Edge(v1, v2), Path(v0, v3).
+Path(v0, v1) :- Rule(459), Edge(v2, v3), Edge(v1, v0), Path(v3, v2).
+Path(v0, v1) :- Rule(460), Edge(v0, v2), Edge(v1, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(461), Edge(v2, v3), Edge(v1, v0), Path(v2, v3).
+Path(v0, v1) :- Rule(462), Edge(v1, v0), Edge(v2, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(463), Edge(v0, v2), Edge(v1, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(464), Edge(v0, v1), Path(v0, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(465), Edge(v1, v0), Path(v0, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(466), Edge(v1, v0), Path(v0, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(467), Edge(v0, v1), Path(v1, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(468), Edge(v0, v1), Path(v1, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(469), Edge(v1, v0), Path(v1, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(470), Edge(v1, v0), Path(v1, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(471), Edge(v0, v1), Path(v0, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(472), Edge(v0, v2), Path(v0, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(473), Edge(v0, v2), Path(v0, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(474), Edge(v2, v0), Path(v1, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(475), Edge(v2, v0), Path(v1, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(476), Edge(v0, v2), Path(v0, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(477), Edge(v0, v1), Path(v2, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(478), Edge(v0, v1), Path(v2, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(479), Edge(v1, v0), Path(v0, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(480), Edge(v1, v0), Path(v0, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(481), Edge(v2, v0), Path(v2, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(482), Edge(v0, v2), Path(v0, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(483), Edge(v2, v0), Path(v2, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(484), Edge(v2, v0), Path(v0, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(485), Edge(v2, v0), Path(v0, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(486), Edge(v2, v0), Path(v0, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(487), Edge(v2, v0), Path(v0, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(488), Edge(v0, v2), Path(v1, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(489), Edge(v0, v2), Path(v1, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(490), Edge(v0, v2), Path(v2, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(491), Edge(v0, v1), Path(v0, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(492), Edge(v0, v1), Path(v0, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(493), Edge(v1, v0), Path(v2, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(494), Edge(v1, v0), Path(v2, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(495), Edge(v0, v2), Path(v2, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(496), Edge(v1, v0), Path(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(497), Edge(v1, v2), Path(v1, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(498), Edge(v1, v0), Path(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(499), Edge(v2, v1), Path(v0, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(500), Edge(v1, v2), Path(v0, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(501), Edge(v2, v1), Path(v0, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(502), Edge(v2, v0), Path(v1, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(503), Edge(v1, v2), Path(v0, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(504), Edge(v0, v2), Path(v0, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(505), Edge(v1, v2), Path(v2, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(506), Edge(v2, v0), Path(v1, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(507), Edge(v0, v1), Path(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(508), Edge(v1, v0), Path(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(509), Edge(v2, v0), Path(v2, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(510), Edge(v0, v1), Path(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(511), Edge(v0, v1), Path(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(512), Edge(v1, v0), Path(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(513), Edge(v1, v2), Path(v2, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(514), Edge(v2, v1), Path(v1, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(515), Edge(v2, v0), Path(v1, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(516), Edge(v2, v0), Path(v2, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(517), Edge(v2, v0), Path(v1, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(518), Edge(v2, v0), Path(v0, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(519), Edge(v1, v2), Path(v1, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(520), Edge(v0, v2), Path(v1, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(521), Edge(v2, v1), Path(v2, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(522), Edge(v2, v1), Path(v0, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(523), Edge(v0, v1), Path(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(524), Edge(v0, v2), Path(v1, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(525), Edge(v1, v0), Path(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(526), Edge(v0, v2), Path(v2, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(527), Edge(v0, v1), Path(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(528), Edge(v1, v0), Path(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(529), Edge(v0, v1), Path(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(530), Edge(v1, v2), Path(v0, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(531), Edge(v2, v1), Path(v2, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(532), Edge(v2, v0), Path(v0, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(533), Edge(v0, v2), Path(v1, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(534), Edge(v0, v2), Path(v2, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(535), Edge(v0, v2), Path(v1, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(536), Edge(v2, v1), Path(v0, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(537), Edge(v0, v2), Path(v0, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(538), Edge(v1, v2), Path(v0, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(539), Edge(v2, v1), Path(v1, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(540), Edge(v0, v1), Path(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(541), Edge(v0, v1), Path(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(542), Edge(v1, v0), Path(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(543), Edge(v1, v0), Path(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(544), Edge(v2, v1), Path(v0, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(545), Edge(v2, v1), Path(v0, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(546), Edge(v0, v2), Path(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(547), Edge(v0, v2), Path(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(548), Edge(v2, v0), Path(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(549), Edge(v0, v2), Path(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(550), Edge(v0, v2), Path(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(551), Edge(v2, v0), Path(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(552), Edge(v1, v2), Path(v0, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(553), Edge(v1, v2), Path(v0, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(554), Edge(v0, v2), Path(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(555), Edge(v0, v2), Path(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(556), Edge(v2, v0), Path(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(557), Edge(v2, v0), Path(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(558), Edge(v2, v0), Path(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(559), Edge(v2, v0), Path(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(560), Edge(v1, v2), Path(v2, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(561), Edge(v1, v2), Path(v2, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(562), Edge(v0, v2), Path(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(563), Edge(v2, v1), Path(v2, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(564), Edge(v2, v1), Path(v2, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(565), Edge(v2, v0), Path(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(566), Edge(v0, v2), Path(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(567), Edge(v2, v0), Path(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(568), Edge(v1, v2), Path(v0, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(569), Edge(v2, v1), Path(v1, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(570), Edge(v0, v1), Path(v2, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(571), Edge(v1, v2), Path(v2, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(572), Edge(v0, v1), Path(v1, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(573), Edge(v1, v0), Path(v2, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(574), Edge(v1, v2), Path(v1, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(575), Edge(v1, v2), Path(v0, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(576), Edge(v2, v1), Path(v1, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(577), Edge(v1, v2), Path(v2, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(578), Edge(v1, v0), Path(v2, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(579), Edge(v1, v2), Path(v1, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(580), Edge(v1, v2), Path(v1, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(581), Edge(v2, v1), Path(v2, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(582), Edge(v2, v1), Path(v0, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(583), Edge(v1, v2), Path(v1, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(584), Edge(v2, v1), Path(v2, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(585), Edge(v2, v1), Path(v0, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(586), Edge(v1, v0), Path(v1, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(587), Edge(v2, v1), Path(v1, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(588), Edge(v1, v0), Path(v1, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(589), Edge(v2, v1), Path(v1, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(590), Edge(v0, v1), Path(v2, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(591), Edge(v0, v1), Path(v1, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(592), Edge(v0, v2), Path(v1, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(593), Edge(v0, v2), Path(v2, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(594), Edge(v1, v2), Path(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(595), Edge(v1, v2), Path(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(596), Edge(v2, v1), Path(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(597), Edge(v1, v2), Path(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(598), Edge(v1, v2), Path(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(599), Edge(v2, v0), Path(v1, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(600), Edge(v2, v0), Path(v2, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(601), Edge(v1, v2), Path(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(602), Edge(v2, v0), Path(v1, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(603), Edge(v1, v2), Path(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(604), Edge(v2, v0), Path(v2, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(605), Edge(v2, v1), Path(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(606), Edge(v1, v2), Path(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(607), Edge(v2, v1), Path(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(608), Edge(v2, v1), Path(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(609), Edge(v2, v1), Path(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(610), Edge(v1, v2), Path(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(611), Edge(v2, v1), Path(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(612), Edge(v2, v1), Path(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(613), Edge(v0, v2), Path(v1, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(614), Edge(v0, v2), Path(v2, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(615), Edge(v2, v1), Path(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(616), Edge(v2, v3), Path(v0, v3), Path(v2, v1).
+Path(v0, v1) :- Rule(617), Edge(v2, v1), Path(v2, v3), Path(v3, v0).
+Path(v0, v1) :- Rule(618), Edge(v2, v3), Path(v2, v0), Path(v3, v1).
+Path(v0, v1) :- Rule(619), Edge(v2, v3), Path(v2, v1), Path(v3, v0).
+Path(v0, v1) :- Rule(620), Edge(v2, v3), Path(v1, v2), Path(v3, v0).
+Path(v0, v1) :- Rule(621), Edge(v1, v2), Path(v0, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(622), Edge(v2, v3), Path(v1, v3), Path(v0, v2).
+Path(v0, v1) :- Rule(623), Edge(v0, v2), Path(v2, v3), Path(v3, v1).
+Path(v0, v1) :- Rule(624), Edge(v2, v1), Path(v3, v2), Path(v0, v3).
+Path(v0, v1) :- Rule(625), Edge(v2, v3), Path(v2, v3), Path(v1, v0).
+Path(v0, v1) :- Rule(626), Edge(v2, v0), Path(v2, v3), Path(v1, v3).
+Path(v0, v1) :- Rule(627), Edge(v1, v2), Path(v3, v2), Path(v3, v0).
+Path(v0, v1) :- Rule(628), Edge(v2, v1), Path(v0, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(629), Edge(v2, v3), Path(v3, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(630), Edge(v2, v1), Path(v3, v0), Path(v3, v2).
+Path(v0, v1) :- Rule(631), Edge(v2, v3), Path(v3, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(632), Edge(v2, v3), Path(v0, v2), Path(v1, v3).
+Path(v0, v1) :- Rule(633), Edge(v2, v1), Path(v0, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(634), Edge(v2, v1), Path(v3, v0), Path(v2, v3).
+Path(v0, v1) :- Rule(635), Edge(v2, v0), Path(v3, v1), Path(v3, v2).
+Path(v0, v1) :- Rule(636), Edge(v0, v2), Path(v3, v2), Path(v1, v3).
+Path(v0, v1) :- Rule(637), Edge(v2, v0), Path(v3, v1), Path(v2, v3).
+Path(v0, v1) :- Rule(638), Edge(v0, v1), Path(v2, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(639), Edge(v0, v1), Path(v2, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(640), Edge(v1, v2), Path(v3, v0), Path(v3, v2).
+Path(v0, v1) :- Rule(641), Edge(v2, v1), Path(v3, v2), Path(v3, v0).
+Path(v0, v1) :- Rule(642), Edge(v1, v0), Path(v2, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(643), Edge(v2, v3), Path(v2, v3), Path(v0, v1).
+Path(v0, v1) :- Rule(644), Edge(v2, v0), Path(v3, v2), Path(v3, v1).
+Path(v0, v1) :- Rule(645), Edge(v2, v3), Path(v3, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(646), Edge(v2, v3), Path(v3, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(647), Edge(v1, v2), Path(v2, v3), Path(v0, v3).
+Path(v0, v1) :- Rule(648), Edge(v2, v3), Path(v0, v3), Path(v1, v2).
+Path(v0, v1) :- Rule(649), Edge(v2, v3), Path(v2, v0), Path(v1, v3).
+Path(v0, v1) :- Rule(650), Edge(v2, v0), Path(v1, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(651), Edge(v0, v2), Path(v2, v3), Path(v1, v3).
+Path(v0, v1) :- Rule(652), Edge(v2, v0), Path(v1, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(653), Edge(v2, v3), Path(v0, v1), Path(v3, v2).
+Path(v0, v1) :- Rule(654), Edge(v2, v3), Path(v0, v1), Path(v2, v3).
+Path(v0, v1) :- Rule(655), Edge(v0, v2), Path(v3, v1), Path(v3, v2).
+Path(v0, v1) :- Rule(656), Edge(v0, v2), Path(v3, v1), Path(v2, v3).
+Path(v0, v1) :- Rule(657), Edge(v2, v3), Path(v3, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(658), Edge(v1, v2), Path(v0, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(659), Edge(v2, v3), Path(v3, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(660), Edge(v2, v0), Path(v2, v3), Path(v3, v1).
+Path(v0, v1) :- Rule(661), Edge(v2, v3), Path(v0, v2), Path(v3, v1).
+Path(v0, v1) :- Rule(662), Edge(v1, v2), Path(v3, v0), Path(v2, v3).
+Path(v0, v1) :- Rule(663), Edge(v0, v2), Path(v3, v2), Path(v3, v1).
+Path(v0, v1) :- Rule(664), Edge(v2, v1), Path(v2, v3), Path(v0, v3).
+Path(v0, v1) :- Rule(665), Edge(v2, v0), Path(v3, v2), Path(v1, v3).
+Path(v0, v1) :- Rule(666), Edge(v1, v2), Path(v2, v3), Path(v3, v0).
+Path(v0, v1) :- Rule(667), Edge(v1, v2), Path(v3, v2), Path(v0, v3).
+Path(v0, v1) :- Rule(668), Edge(v2, v3), Path(v1, v3), Path(v2, v0).
+Path(v0, v1) :- Rule(669), Edge(v2, v3), Path(v2, v1), Path(v0, v3).
+Path(v0, v1) :- Rule(670), Edge(v2, v3), Path(v1, v2), Path(v0, v3).
+Path(v0, v1) :- Rule(671), Edge(v2, v3), Path(v1, v0), Path(v3, v2).
+Path(v0, v1) :- Rule(672), Edge(v0, v2), Path(v1, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(673), Edge(v2, v3), Path(v1, v0), Path(v2, v3).
+Path(v0, v1) :- Rule(674), Edge(v1, v0), Path(v2, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(675), Edge(v0, v2), Path(v1, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(676), Path(v0, v1), Path(v0, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(677), Path(v1, v0), Path(v0, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(678), Path(v1, v0), Path(v0, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(679), Path(v0, v1), Path(v1, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(680), Path(v0, v1), Path(v1, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(681), Path(v1, v0), Path(v1, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(682), Path(v1, v0), Path(v1, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(683), Path(v0, v1), Path(v0, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(684), Path(v0, v2), Path(v0, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(685), Path(v0, v2), Path(v0, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(686), Path(v2, v0), Path(v1, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(687), Path(v2, v0), Path(v1, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(688), Path(v0, v2), Path(v0, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(689), Path(v0, v1), Path(v2, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(690), Path(v0, v1), Path(v2, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(691), Path(v1, v0), Path(v0, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(692), Path(v1, v0), Path(v0, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(693), Path(v2, v0), Path(v2, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(694), Path(v0, v2), Path(v0, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(695), Path(v2, v0), Path(v2, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(696), Path(v2, v0), Path(v0, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(697), Path(v2, v0), Path(v0, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(698), Path(v2, v0), Path(v0, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(699), Path(v2, v0), Path(v0, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(700), Path(v0, v2), Path(v1, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(701), Path(v0, v2), Path(v1, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(702), Path(v0, v2), Path(v2, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(703), Path(v0, v1), Path(v0, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(704), Path(v0, v1), Path(v0, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(705), Path(v1, v0), Path(v2, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(706), Path(v1, v0), Path(v2, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(707), Path(v0, v2), Path(v2, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(708), Path(v1, v0), Path(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(709), Path(v1, v2), Path(v1, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(710), Path(v1, v0), Path(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(711), Path(v2, v1), Path(v0, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(712), Path(v1, v2), Path(v0, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(713), Path(v2, v1), Path(v0, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(714), Path(v2, v0), Path(v1, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(715), Path(v1, v2), Path(v0, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(716), Path(v0, v2), Path(v0, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(717), Path(v1, v2), Path(v2, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(718), Path(v2, v0), Path(v1, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(719), Path(v0, v1), Path(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(720), Path(v1, v0), Path(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(721), Path(v2, v0), Path(v2, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(722), Path(v0, v1), Path(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(723), Path(v0, v1), Path(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(724), Path(v1, v0), Path(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(725), Path(v1, v2), Path(v2, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(726), Path(v2, v1), Path(v1, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(727), Path(v2, v0), Path(v1, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(728), Path(v2, v0), Path(v2, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(729), Path(v2, v0), Path(v1, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(730), Path(v2, v0), Path(v0, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(731), Path(v1, v2), Path(v1, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(732), Path(v0, v2), Path(v1, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(733), Path(v2, v1), Path(v2, v0), Path(v0, v1).
+Path(v0, v1) :- Rule(734), Path(v2, v1), Path(v0, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(735), Path(v0, v1), Path(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(736), Path(v0, v2), Path(v1, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(737), Path(v1, v0), Path(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(738), Path(v0, v2), Path(v2, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(739), Path(v0, v1), Path(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(740), Path(v1, v0), Path(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(741), Path(v0, v1), Path(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(742), Path(v1, v2), Path(v0, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(743), Path(v2, v1), Path(v2, v0), Path(v1, v0).
+Path(v0, v1) :- Rule(744), Path(v2, v0), Path(v0, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(745), Path(v0, v2), Path(v1, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(746), Path(v0, v2), Path(v2, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(747), Path(v0, v2), Path(v1, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(748), Path(v2, v1), Path(v0, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(749), Path(v0, v2), Path(v0, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(750), Path(v1, v2), Path(v0, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(751), Path(v2, v1), Path(v1, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(752), Path(v0, v1), Path(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(753), Path(v0, v1), Path(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(754), Path(v1, v0), Path(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(755), Path(v1, v0), Path(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(756), Path(v2, v1), Path(v0, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(757), Path(v2, v1), Path(v0, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(758), Path(v0, v2), Path(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(759), Path(v0, v2), Path(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(760), Path(v2, v0), Path(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(761), Path(v0, v2), Path(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(762), Path(v0, v2), Path(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(763), Path(v2, v0), Path(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(764), Path(v1, v2), Path(v0, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(765), Path(v1, v2), Path(v0, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(766), Path(v0, v2), Path(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(767), Path(v0, v2), Path(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(768), Path(v2, v0), Path(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(769), Path(v2, v0), Path(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(770), Path(v2, v0), Path(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(771), Path(v2, v0), Path(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(772), Path(v1, v2), Path(v2, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(773), Path(v1, v2), Path(v2, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(774), Path(v0, v2), Path(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(775), Path(v2, v1), Path(v2, v0), Path(v0, v2).
+Path(v0, v1) :- Rule(776), Path(v2, v1), Path(v2, v0), Path(v2, v0).
+Path(v0, v1) :- Rule(777), Path(v2, v0), Path(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(778), Path(v0, v2), Path(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(779), Path(v2, v0), Path(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(780), Path(v1, v2), Path(v0, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(781), Path(v2, v1), Path(v1, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(782), Path(v0, v1), Path(v2, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(783), Path(v1, v2), Path(v2, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(784), Path(v0, v1), Path(v1, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(785), Path(v1, v0), Path(v2, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(786), Path(v1, v2), Path(v1, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(787), Path(v1, v2), Path(v0, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(788), Path(v2, v1), Path(v1, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(789), Path(v1, v2), Path(v2, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(790), Path(v1, v0), Path(v2, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(791), Path(v1, v2), Path(v1, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(792), Path(v1, v2), Path(v1, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(793), Path(v2, v1), Path(v2, v1), Path(v0, v1).
+Path(v0, v1) :- Rule(794), Path(v2, v1), Path(v0, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(795), Path(v1, v2), Path(v1, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(796), Path(v2, v1), Path(v2, v1), Path(v1, v0).
+Path(v0, v1) :- Rule(797), Path(v2, v1), Path(v0, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(798), Path(v1, v0), Path(v1, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(799), Path(v2, v1), Path(v1, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(800), Path(v1, v0), Path(v1, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(801), Path(v2, v1), Path(v1, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(802), Path(v0, v1), Path(v2, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(803), Path(v0, v1), Path(v1, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(804), Path(v0, v2), Path(v1, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(805), Path(v0, v2), Path(v2, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(806), Path(v1, v2), Path(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(807), Path(v1, v2), Path(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(808), Path(v2, v1), Path(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(809), Path(v1, v2), Path(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(810), Path(v1, v2), Path(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(811), Path(v2, v0), Path(v1, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(812), Path(v2, v0), Path(v2, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(813), Path(v1, v2), Path(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(814), Path(v2, v0), Path(v1, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(815), Path(v1, v2), Path(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(816), Path(v2, v0), Path(v2, v1), Path(v1, v2).
+Path(v0, v1) :- Rule(817), Path(v2, v1), Path(v1, v2), Path(v2, v0).
+Path(v0, v1) :- Rule(818), Path(v1, v2), Path(v1, v2), Path(v0, v2).
+Path(v0, v1) :- Rule(819), Path(v2, v1), Path(v2, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(820), Path(v2, v1), Path(v2, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(821), Path(v2, v1), Path(v2, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(822), Path(v1, v2), Path(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(823), Path(v2, v1), Path(v2, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(824), Path(v2, v1), Path(v0, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(825), Path(v0, v2), Path(v1, v2), Path(v2, v1).
+Path(v0, v1) :- Rule(826), Path(v0, v2), Path(v2, v1), Path(v2, v1).
+Path(v0, v1) :- Rule(827), Path(v2, v1), Path(v0, v2), Path(v1, v2).
+Path(v0, v1) :- Rule(828), Path(v2, v3), Path(v0, v3), Path(v2, v1).
+Path(v0, v1) :- Rule(829), Path(v2, v1), Path(v2, v3), Path(v3, v0).
+Path(v0, v1) :- Rule(830), Path(v2, v3), Path(v2, v0), Path(v3, v1).
+Path(v0, v1) :- Rule(831), Path(v2, v3), Path(v2, v1), Path(v3, v0).
+Path(v0, v1) :- Rule(832), Path(v2, v3), Path(v1, v2), Path(v3, v0).
+Path(v0, v1) :- Rule(833), Path(v1, v2), Path(v0, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(834), Path(v2, v3), Path(v1, v3), Path(v0, v2).
+Path(v0, v1) :- Rule(835), Path(v0, v2), Path(v2, v3), Path(v3, v1).
+Path(v0, v1) :- Rule(836), Path(v2, v1), Path(v3, v2), Path(v0, v3).
+Path(v0, v1) :- Rule(837), Path(v2, v3), Path(v2, v3), Path(v1, v0).
+Path(v0, v1) :- Rule(838), Path(v2, v0), Path(v2, v3), Path(v1, v3).
+Path(v0, v1) :- Rule(839), Path(v1, v2), Path(v3, v2), Path(v3, v0).
+Path(v0, v1) :- Rule(840), Path(v2, v1), Path(v0, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(841), Path(v2, v3), Path(v3, v0), Path(v1, v2).
+Path(v0, v1) :- Rule(842), Path(v2, v1), Path(v3, v0), Path(v3, v2).
+Path(v0, v1) :- Rule(843), Path(v2, v3), Path(v3, v1), Path(v2, v0).
+Path(v0, v1) :- Rule(844), Path(v2, v3), Path(v0, v2), Path(v1, v3).
+Path(v0, v1) :- Rule(845), Path(v2, v1), Path(v0, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(846), Path(v2, v1), Path(v3, v0), Path(v2, v3).
+Path(v0, v1) :- Rule(847), Path(v2, v0), Path(v3, v1), Path(v3, v2).
+Path(v0, v1) :- Rule(848), Path(v0, v2), Path(v3, v2), Path(v1, v3).
+Path(v0, v1) :- Rule(849), Path(v2, v0), Path(v3, v1), Path(v2, v3).
+Path(v0, v1) :- Rule(850), Path(v0, v1), Path(v2, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(851), Path(v0, v1), Path(v2, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(852), Path(v1, v2), Path(v3, v0), Path(v3, v2).
+Path(v0, v1) :- Rule(853), Path(v2, v1), Path(v3, v2), Path(v3, v0).
+Path(v0, v1) :- Rule(854), Path(v1, v0), Path(v2, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(855), Path(v2, v3), Path(v2, v3), Path(v0, v1).
+Path(v0, v1) :- Rule(856), Path(v2, v0), Path(v3, v2), Path(v3, v1).
+Path(v0, v1) :- Rule(857), Path(v2, v3), Path(v3, v1), Path(v0, v2).
+Path(v0, v1) :- Rule(858), Path(v2, v3), Path(v3, v2), Path(v1, v0).
+Path(v0, v1) :- Rule(859), Path(v1, v2), Path(v2, v3), Path(v0, v3).
+Path(v0, v1) :- Rule(860), Path(v2, v3), Path(v0, v3), Path(v1, v2).
+Path(v0, v1) :- Rule(861), Path(v2, v3), Path(v2, v0), Path(v1, v3).
+Path(v0, v1) :- Rule(862), Path(v2, v0), Path(v1, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(863), Path(v0, v2), Path(v2, v3), Path(v1, v3).
+Path(v0, v1) :- Rule(864), Path(v2, v0), Path(v1, v3), Path(v2, v3).
+Path(v0, v1) :- Rule(865), Path(v2, v3), Path(v0, v1), Path(v3, v2).
+Path(v0, v1) :- Rule(866), Path(v2, v3), Path(v0, v1), Path(v2, v3).
+Path(v0, v1) :- Rule(867), Path(v0, v2), Path(v3, v1), Path(v3, v2).
+Path(v0, v1) :- Rule(868), Path(v0, v2), Path(v3, v1), Path(v2, v3).
+Path(v0, v1) :- Rule(869), Path(v2, v3), Path(v3, v0), Path(v2, v1).
+Path(v0, v1) :- Rule(870), Path(v1, v2), Path(v0, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(871), Path(v2, v3), Path(v3, v2), Path(v0, v1).
+Path(v0, v1) :- Rule(872), Path(v2, v0), Path(v2, v3), Path(v3, v1).
+Path(v0, v1) :- Rule(873), Path(v2, v3), Path(v0, v2), Path(v3, v1).
+Path(v0, v1) :- Rule(874), Path(v1, v2), Path(v3, v0), Path(v2, v3).
+Path(v0, v1) :- Rule(875), Path(v0, v2), Path(v3, v2), Path(v3, v1).
+Path(v0, v1) :- Rule(876), Path(v2, v1), Path(v2, v3), Path(v0, v3).
+Path(v0, v1) :- Rule(877), Path(v2, v0), Path(v3, v2), Path(v1, v3).
+Path(v0, v1) :- Rule(878), Path(v1, v2), Path(v2, v3), Path(v3, v0).
+Path(v0, v1) :- Rule(879), Path(v1, v2), Path(v3, v2), Path(v0, v3).
+Path(v0, v1) :- Rule(880), Path(v2, v3), Path(v1, v3), Path(v2, v0).
+Path(v0, v1) :- Rule(881), Path(v2, v3), Path(v2, v1), Path(v0, v3).
+Path(v0, v1) :- Rule(882), Path(v2, v3), Path(v1, v2), Path(v0, v3).
+Path(v0, v1) :- Rule(883), Path(v2, v3), Path(v1, v0), Path(v3, v2).
+Path(v0, v1) :- Rule(884), Path(v0, v2), Path(v1, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(885), Path(v2, v3), Path(v1, v0), Path(v2, v3).
+Path(v0, v1) :- Rule(886), Path(v1, v0), Path(v2, v3), Path(v3, v2).
+Path(v0, v1) :- Rule(887), Path(v0, v2), Path(v1, v3), Path(v2, v3).
+SCC(v0, v1) :- Rule(888), Edge(v0, v1).
+SCC(v0, v1) :- Rule(889), Edge(v1, v0).
+SCC(v0, v1) :- Rule(890), Path(v0, v1).
+SCC(v0, v1) :- Rule(891), Path(v1, v0).
+SCC(v0, v1) :- Rule(892), SCC(v0, v1).
+SCC(v0, v1) :- Rule(893), SCC(v1, v0).
+SCC(v0, v1) :- Rule(894), Edge(v1, v0), Edge(v1, v0).
+SCC(v0, v1) :- Rule(895), Edge(v1, v0), Edge(v0, v1).
+SCC(v0, v1) :- Rule(896), Edge(v0, v1), Edge(v1, v0).
+SCC(v0, v1) :- Rule(897), Edge(v0, v1), Edge(v0, v1).
+SCC(v0, v1) :- Rule(898), Edge(v2, v0), Edge(v1, v2).
+SCC(v0, v1) :- Rule(899), Edge(v2, v1), Edge(v0, v2).
+SCC(v0, v1) :- Rule(900), Edge(v1, v2), Edge(v2, v0).
+SCC(v0, v1) :- Rule(901), Edge(v0, v2), Edge(v2, v1).
+SCC(v0, v1) :- Rule(902), Edge(v0, v2), Edge(v1, v2).
+SCC(v0, v1) :- Rule(903), Edge(v2, v0), Edge(v2, v1).
+SCC(v0, v1) :- Rule(904), Edge(v2, v1), Edge(v2, v0).
+SCC(v0, v1) :- Rule(905), Edge(v1, v2), Edge(v0, v2).
+SCC(v0, v1) :- Rule(906), Edge(v1, v0), Path(v1, v0).
+SCC(v0, v1) :- Rule(907), Edge(v1, v0), Path(v0, v1).
+SCC(v0, v1) :- Rule(908), Edge(v0, v1), Path(v1, v0).
+SCC(v0, v1) :- Rule(909), Edge(v0, v1), Path(v0, v1).
+SCC(v0, v1) :- Rule(910), Edge(v2, v0), Path(v1, v2).
+SCC(v0, v1) :- Rule(911), Edge(v2, v1), Path(v0, v2).
+SCC(v0, v1) :- Rule(912), Edge(v1, v2), Path(v2, v0).
+SCC(v0, v1) :- Rule(913), Edge(v0, v2), Path(v2, v1).
+SCC(v0, v1) :- Rule(914), Edge(v0, v2), Path(v1, v2).
+SCC(v0, v1) :- Rule(915), Edge(v2, v0), Path(v2, v1).
+SCC(v0, v1) :- Rule(916), Edge(v2, v1), Path(v2, v0).
+SCC(v0, v1) :- Rule(917), Edge(v1, v2), Path(v0, v2).
+SCC(v0, v1) :- Rule(918), Edge(v1, v0), SCC(v1, v0).
+SCC(v0, v1) :- Rule(919), Edge(v1, v0), SCC(v0, v1).
+SCC(v0, v1) :- Rule(920), Edge(v0, v1), SCC(v1, v0).
+SCC(v0, v1) :- Rule(921), Edge(v0, v1), SCC(v0, v1).
+SCC(v0, v1) :- Rule(922), Edge(v2, v0), SCC(v1, v2).
+SCC(v0, v1) :- Rule(923), Edge(v2, v1), SCC(v0, v2).
+SCC(v0, v1) :- Rule(924), Edge(v1, v2), SCC(v2, v0).
+SCC(v0, v1) :- Rule(925), Edge(v0, v2), SCC(v2, v1).
+SCC(v0, v1) :- Rule(926), Edge(v0, v2), SCC(v1, v2).
+SCC(v0, v1) :- Rule(927), Edge(v2, v0), SCC(v2, v1).
+SCC(v0, v1) :- Rule(928), Edge(v2, v1), SCC(v2, v0).
+SCC(v0, v1) :- Rule(929), Edge(v1, v2), SCC(v0, v2).
+SCC(v0, v1) :- Rule(930), Path(v1, v0), Path(v1, v0).
+SCC(v0, v1) :- Rule(931), Path(v1, v0), Path(v0, v1).
+SCC(v0, v1) :- Rule(932), Path(v0, v1), Path(v1, v0).
+SCC(v0, v1) :- Rule(933), Path(v0, v1), Path(v0, v1).
+SCC(v0, v1) :- Rule(934), Path(v2, v0), Path(v1, v2).
+SCC(v0, v1) :- Rule(935), Path(v2, v1), Path(v0, v2).
+SCC(v0, v1) :- Rule(936), Path(v1, v2), Path(v2, v0).
+SCC(v0, v1) :- Rule(937), Path(v0, v2), Path(v2, v1).
+SCC(v0, v1) :- Rule(938), Path(v0, v2), Path(v1, v2).
+SCC(v0, v1) :- Rule(939), Path(v2, v0), Path(v2, v1).
+SCC(v0, v1) :- Rule(940), Path(v2, v1), Path(v2, v0).
+SCC(v0, v1) :- Rule(941), Path(v1, v2), Path(v0, v2).
+SCC(v0, v1) :- Rule(942), Path(v1, v0), SCC(v1, v0).
+SCC(v0, v1) :- Rule(943), Path(v1, v0), SCC(v0, v1).
+SCC(v0, v1) :- Rule(944), Path(v0, v1), SCC(v1, v0).
+SCC(v0, v1) :- Rule(945), Path(v0, v1), SCC(v0, v1).
+SCC(v0, v1) :- Rule(946), Path(v2, v0), SCC(v1, v2).
+SCC(v0, v1) :- Rule(947), Path(v2, v1), SCC(v0, v2).
+SCC(v0, v1) :- Rule(948), Path(v1, v2), SCC(v2, v0).
+SCC(v0, v1) :- Rule(949), Path(v0, v2), SCC(v2, v1).
+SCC(v0, v1) :- Rule(950), Path(v0, v2), SCC(v1, v2).
+SCC(v0, v1) :- Rule(951), Path(v2, v0), SCC(v2, v1).
+SCC(v0, v1) :- Rule(952), Path(v2, v1), SCC(v2, v0).
+SCC(v0, v1) :- Rule(953), Path(v1, v2), SCC(v0, v2).
+SCC(v0, v1) :- Rule(954), SCC(v1, v0), SCC(v1, v0).
+SCC(v0, v1) :- Rule(955), SCC(v1, v0), SCC(v0, v1).
+SCC(v0, v1) :- Rule(956), SCC(v0, v1), SCC(v1, v0).
+SCC(v0, v1) :- Rule(957), SCC(v0, v1), SCC(v0, v1).
+SCC(v0, v1) :- Rule(958), SCC(v2, v0), SCC(v1, v2).
+SCC(v0, v1) :- Rule(959), SCC(v2, v1), SCC(v0, v2).
+SCC(v0, v1) :- Rule(960), SCC(v1, v2), SCC(v2, v0).
+SCC(v0, v1) :- Rule(961), SCC(v0, v2), SCC(v2, v1).
+SCC(v0, v1) :- Rule(962), SCC(v0, v2), SCC(v1, v2).
+SCC(v0, v1) :- Rule(963), SCC(v2, v0), SCC(v2, v1).
+SCC(v0, v1) :- Rule(964), SCC(v2, v1), SCC(v2, v0).
+SCC(v0, v1) :- Rule(965), SCC(v1, v2), SCC(v0, v2).
+SCC(v0, v1) :- Rule(966), Edge(v0, v1), Edge(v0, v1), Edge(v1, v0).
+SCC(v0, v1) :- Rule(967), Edge(v1, v0), Edge(v0, v1), Edge(v0, v1).
+SCC(v0, v1) :- Rule(968), Edge(v1, v0), Edge(v0, v1), Edge(v1, v0).
+SCC(v0, v1) :- Rule(969), Edge(v0, v1), Edge(v1, v0), Edge(v0, v1).
+SCC(v0, v1) :- Rule(970), Edge(v0, v1), Edge(v1, v0), Edge(v1, v0).
+SCC(v0, v1) :- Rule(971), Edge(v1, v0), Edge(v1, v0), Edge(v0, v1).
+SCC(v0, v1) :- Rule(972), Edge(v1, v0), Edge(v1, v0), Edge(v1, v0).
+SCC(v0, v1) :- Rule(973), Edge(v0, v1), Edge(v0, v1), Edge(v0, v1).
+SCC(v0, v1) :- Rule(974), Edge(v0, v2), Edge(v0, v1), Edge(v0, v2).
+SCC(v0, v1) :- Rule(975), Edge(v0, v2), Edge(v0, v1), Edge(v2, v0).
+SCC(v0, v1) :- Rule(976), Edge(v2, v0), Edge(v1, v0), Edge(v0, v2).
+SCC(v0, v1) :- Rule(977), Edge(v2, v0), Edge(v1, v0), Edge(v2, v0).
+SCC(v0, v1) :- Rule(978), Edge(v0, v2), Edge(v0, v2), Edge(v0, v1).
+SCC(v0, v1) :- Rule(979), Edge(v0, v1), Edge(v2, v0), Edge(v0, v2).
+SCC(v0, v1) :- Rule(980), Edge(v0, v1), Edge(v2, v0), Edge(v2, v0).
+SCC(v0, v1) :- Rule(981), Edge(v1, v0), Edge(v0, v2), Edge(v0, v2).
+SCC(v0, v1) :- Rule(982), Edge(v1, v0), Edge(v0, v2), Edge(v2, v0).
+SCC(v0, v1) :- Rule(983), Edge(v2, v0), Edge(v2, v0), Edge(v0, v1).
+SCC(v0, v1) :- Rule(984), Edge(v0, v2), Edge(v0, v2), Edge(v1, v0).
+SCC(v0, v1) :- Rule(985), Edge(v2, v0), Edge(v2, v0), Edge(v1, v0).
+SCC(v0, v1) :- Rule(986), Edge(v2, v0), Edge(v0, v1), Edge(v0, v2).
+SCC(v0, v1) :- Rule(987), Edge(v2, v0), Edge(v0, v1), Edge(v2, v0).
+SCC(v0, v1) :- Rule(988), Edge(v2, v0), Edge(v0, v2), Edge(v0, v1).
+SCC(v0, v1) :- Rule(989), Edge(v2, v0), Edge(v0, v2), Edge(v1, v0).
+SCC(v0, v1) :- Rule(990), Edge(v0, v2), Edge(v1, v0), Edge(v0, v2).
+SCC(v0, v1) :- Rule(991), Edge(v0, v2), Edge(v1, v0), Edge(v2, v0).
+SCC(v0, v1) :- Rule(992), Edge(v0, v2), Edge(v2, v0), Edge(v0, v1).
+SCC(v0, v1) :- Rule(993), Edge(v0, v1), Edge(v0, v2), Edge(v0, v2).
+SCC(v0, v1) :- Rule(994), Edge(v0, v1), Edge(v0, v2), Edge(v2, v0).
+SCC(v0, v1) :- Rule(995), Edge(v1, v0), Edge(v2, v0), Edge(v0, v2).
+SCC(v0, v1) :- Rule(996), Edge(v1, v0), Edge(v2, v0), Edge(v2, v0).
+SCC(v0, v1) :- Rule(997), Edge(v0, v2), Edge(v2, v0), Edge(v1, v0).
+SCC(v0, v1) :- Rule(998), Edge(v1, v0), Edge(v0, v2), Edge(v1, v2).
+SCC(v0, v1) :- Rule(999), Edge(v1, v2), Edge(v1, v0), Edge(v2, v0).
+SCC(v0, v1) :- Rule(1000), Edge(v1, v0), Edge(v1, v2), Edge(v0, v2).

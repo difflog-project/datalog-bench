@@ -4,10 +4,9 @@
 Note that each benchmark may not contain all files listed below.
 
 Additionally, a few benchmarks (*quickfoil-webkb* and *quickfoil-bongard*) contain variants: 
-<br><br>
-*quickfoil-webkb* has 8 variants which are generated from different data sources but have similar size candidate rule sets.
+&emsp;*quickfoil-webkb* has 8 variants which are generated from different data sources but have similar size candidate rule sets.
 <br>
-*quickfoil-bongard* has 10 variants which are generated from the same data source but have varying size candidate rule sets.
+&emsp;*quickfoil-bongard* has 10 variants which are generated from the same data source but have varying size candidate rule sets.
 
 ## ALPS files
 

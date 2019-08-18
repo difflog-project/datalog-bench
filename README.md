@@ -9,13 +9,13 @@ Additionally, a few benchmarks (*quickfoil-webkb* and *quickfoil-bongard*) conta
 <br>
 &emsp;*quickfoil-bongard* has 10 variants which are generated from the same data source but have varying size candidate rule sets.
 
-## ALPS files
+### Files specific to ALPS format
 <b>\*.d</b> -- ALPS-friendly input and output data. There should be one .d file per benchmark.
 <br>
 <b>\*.tp</b> -- ALPS-friendly template file. Contains meta-rules required for ALPS's rule generation. There should be one .tp file per benchmark.
 <br>
 
-## ProSynth files
+### Files specific to ProSynth format
 <b>\*.facts</b> -- ProSynth-friendly input data. Contains expected tuples for a specific input. There should be one .facts file per input relation. 
 <br>
 <b>\*.expected</b> -- ProSynth-friendly output data. Contains expected tuples for a specific output. There should be one .expected file per output relation. 

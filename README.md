@@ -1,6 +1,6 @@
 # Datalog Benchmarks & Rule Generation Code
 
-#### Benchmark Structure
+### Benchmark Structure
 Note that each benchmark may not contain all files listed below.
 
 Additionally, a few benchmarks (*quickfoil-webkb* and *quickfoil-bongard*) contain variants: 

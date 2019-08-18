@@ -1,4 +1,8 @@
-# Datalog Benchmarks & Rule Generation Code
+datalog-bench is a collection of Datalog programs from the literature in various research areas such as databases, information retrieval, and program analysis.
+
+The primary goal of this collection is to benchmark techniques for synthesizing Datalog programs from input-output data -- an important problem studied in fields such as program synthesis and Inductive Logic Programming, with applications in a variety of domains such as bioinformatics, big-data analytics, natural language processing, networking, program analysis, and robotics.
+
+Besides the target Datalog programs themselves, this collection includes input-output datasets for each program, as well as code to generate candidate rules using various methods of inducing syntactic bias, akin to syntax-guided synthesis (SyGuS) or template rules in meta-interpretive learning.
 
 ### Benchmark Structure
 Note that each benchmark may not contain all files listed below.

@@ -4,7 +4,7 @@ The primary goal of this collection is to benchmark techniques for learning Data
 
 Besides the target Datalog programs themselves, this collection includes input-output datasets for each program, as well as code to generate candidate rules using various methods of inducing syntactic bias, akin to syntax-guided synthesis (SyGuS) or template rules in meta-interpretive learning.
 
-### Benchmark Structure
+## Benchmark Structure
 Note that each benchmark may not contain all files listed below.
 
 Additionally, a few benchmarks (*quickfoil-webkb* and *quickfoil-bongard*) contain variants: 

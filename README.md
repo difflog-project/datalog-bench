@@ -40,7 +40,7 @@ Additionally, a few benchmarks (*quickfoil-webkb* and *quickfoil-bongard*) conta
 <br>
 
 ## Rule Generation
-All rule generation algorithms can be found in the <b>rule-gen</b> folder. There are four variants:
+All rule generation algorithms can be found in the <b>rule-gen</b> folder. There are four variants:<br><br>
 <b>generate</b> -- standard rule generation. Enumerates all possible combinations of relations and variables, then applies a number of filters to remove redundant and clearly incorrect rules. Notably, it filters any rules that have variables that match different types in different relations.
 <br>
 <b>generate-fast</b> -- does not enumerate combinations that match different types in different relations, cutting down on the algorithm's runtime (see *iterate-args* function). However, offers less control over candidate rule set generated. The algorithm applies a number of filters to remove redundant and clearly incorrect rules as well.

@@ -38,3 +38,14 @@ Additionally, a few benchmarks (*quickfoil-webkb* and *quickfoil-bongard*) conta
 <br>
 <b>rules.small.dl</b> -- candidate rules set sourced from an alternate rule generation algorithm from a previous project. There should be one rules.small.dl file per benchmark.
 <br>
+
+## Rule Generation
+All rule generation algorithms can be found in the <b>rule-gen</b> folder. There are four variants:
+<b>generate</b> -- standard rule generation. Enumerates all possible combinations of relations and variables, then applies a number of filters to remove redundant and clearly incorrect rules. Notably, it filters any rules that have variables that match different types in different relations.
+<br>
+<b>generate-fast</b> -- does not enumerate combinations that match different types in different relations, cutting down on the algorithm's runtime (see *iterate-args* function). However, offers less control over candidate rule set generated. The algorithm applies a number of filters to remove redundant and clearly incorrect rules as well.
+<br>
+<b>generate-back</b> -- standard rule generation, but inserts *Rule* relation at the front of each rule rather than the back.
+<br>
+<b>generate-negation</b> -- standard rule generation, but is capable of handling negation.
+<br>

@@ -18,6 +18,7 @@ Additionally, a few benchmarks (*quickfoil-webkb* and *quickfoil-bongard*) conta
 <br>
 <b>\*.expected</b> -- output data. Contains expected tuples for a specific output. There should be one .expected file per output relation. 
 <br>
+##### Alternate format
 <b>\*.d</b> -- alternate format combined input and output data. There may be one .d file per benchmark.
 <br>
 
@@ -32,8 +33,7 @@ Additionally, a few benchmarks (*quickfoil-webkb* and *quickfoil-bongard*) conta
 <br>
 <b>ruleNames.\*.txt</b> -- list of rule numbers which define the candidate rules the algorithm has access to. By default, this is a list of rule numbers for all candidate rules.  Created automatically by the candidate rule generation algorithm when generating the candidate rule set. There should be at most one ruleNames.small.txt and at most one ruleNames.large.txt file per benchmark - these respectively correspond with ruleNames.small.txt and ruleNames.large.txt.
 <br>
-
-#### Alternate format
+##### Alternate format
 <b>\*.tp</b> -- alternate format template file. Contains meta-rules required for alternative rule generation procedure. There may be one .tp file per benchmark.
 <br>
 <b>rules.small.dl</b> -- candidate rules set sourced from an alternate rule generation algorithm from a previous project. There should be one rules.small.dl file per benchmark.

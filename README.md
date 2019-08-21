@@ -1,6 +1,6 @@
-datalog-bench is a collection of Datalog programs from the literature in various research areas such as databases, information retrieval, and program analysis.
+DatalogBench is a collection of Datalog programs from the literature in various fields including databases, information retrieval, and program analysis.
 
-The primary goal of this collection is to benchmark techniques for learning Datalog programs from input-output data -- an important problem studied in fields such as program synthesis and Inductive Logic Programming, with applications in a variety of domains such as bioinformatics, big-data analytics, natural language processing, networking, program analysis, and robotics.
+The primary goal of this collection is to benchmark techniques for learning Datalog programs from input-output data. This is an important problem studied in fields such as program synthesis and Inductive Logic Programming, with applications in a variety of domains such as bioinformatics, big-data analytics, natural language processing, networking, program analysis, and robotics.
 
 Besides the target Datalog programs themselves, this collection includes input-output datasets for each program, as well as code to generate candidate rules using various methods of inducing syntactic bias, akin to syntax-guided synthesis (SyGuS) or template rules in meta-interpretive learning.
 
@@ -14,6 +14,10 @@ Additionally, a few benchmarks (*quickfoil-webkb* and *quickfoil-bongard*) conta
 &emsp;*quickfoil-bongard* has 10 variants which are generated from the same data source but have varying size candidate rule sets.
 
 ### Input-Output Data
+
+Input-output datasets are provided in two different formats, called primary and alternate.
+
+##### Primary format
 <b>\*.facts</b> -- input data. Contains expected tuples for a specific input. There should be one .facts file per input relation. 
 <br>
 <b>\*.expected</b> -- output data. Contains expected tuples for a specific output. There should be one .expected file per output relation. 

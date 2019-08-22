@@ -15,13 +15,13 @@ Additionally, a few benchmarks (*quickfoil-webkb* and *quickfoil-bongard*) conta
 
 ### Input-Output Data
 
-Input-output datasets are provided in two different formats, called primary and alternate.
+Input-output datasets are provided in two different formats, called primary and alternate, as described below.
 
 ##### Primary format
-This format stores input data in <b>\*.facts</b> files and output data in <b>\*.expected</b> files.  Each input relation's tuples are stored in a separate <b>.facts</b> file, and each output relation's expected tuples are stored in a separate <b>.expected</b> file. 
+This format provides input data in <b>\*.facts</b> files and output data in <b>\*.expected</b> files.  In particular, the tuples of each input relation named <b>R</b> are provided in a file named <b>R.facts</b>, and the expected tuples of each output relation named <b>S</b> are provided in a file named <b>S.expected</b>. 
 <br>
 ##### Alternate format
-This format stores all input-output data combined in a single <b>.d</b> file.
+This format provides all input-output data combined in a single <b>.d</b> file.
 <br>
 
 ### Rule Generation Data

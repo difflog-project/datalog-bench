@@ -10,9 +10,9 @@ All rule generation algorithms can be found in the <b>rule-gen</b> folder. There
 <br>
 <b>generate-fast</b>, which, unlike <b>generate</b>, does not enumerate any rules whose types do not match the types of the relations, thus dramatically cutting down on the algorithm's runtime. However, this algorithm offers less control over the candidate rule set generated. The algorithm applies a number of filters to remove redundant and clearly incorrect rules as well.
 <br>
-<b>generate-back</b>, which is equivalent to the standard rule generation algorithm, but inserts *Rule* relation at the front of each rule rather than the back.
+<b>generate-back</b>, which is equivalent to <b>generate</b>, but inserts *Rule* relation at the front of each rule rather than the back.
 <br>
-<b>generate-negation</b>, which is equivalent to the standard rule generation algorithm, but is capable of handling negation.
+<b>generate-negation</b>, which is equivalent to <b>generate</b>, but is capable of handling negation.
 <br>
 
 ## 2. Benchmark Structure

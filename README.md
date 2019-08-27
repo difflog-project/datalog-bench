@@ -31,7 +31,7 @@ This format provides all input-output data combined in a single <b>.d</b> file. 
 
 ### 2.2 Rule Generation Data
 
-Rule generation data is provided in two different formats, called primary and alternate, as described below. The primary format stores the candidate rule set in <b>rules.large.dl</b> 
+Rule generation data is provided in two different formats, called primary and alternate, as described below.
 
 ##### Primary format
 This format defines input and output relations for the rule generation algorithm in a <b>rules.t</b> file. The rule generation algorithm takes <b>rules.t</b> as input, and enumerates every possible combination of candidate rules. It applies a number of filters to remove redundant and clearly incorrect rules, such as ensuring that the variable numbers are minimized left to right and that variables match the types of the relations throughout the rules. Finally, it produces a <b>rules.large.dl</b> file. There should be one <b>rules.t</b> file per benchmark.

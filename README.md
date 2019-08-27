@@ -10,7 +10,7 @@ All rule generation algorithms produce candidate rule sets in the format support
 <br>
 <b>generate-fast</b>, which, unlike <b>generate</b>, does not enumerate any rules whose types do not match the types of the relations, thus dramatically cutting down on the algorithm's runtime. However, this algorithm offers less control over the candidate rule set generated. The algorithm applies a number of filters to remove redundant and clearly incorrect rules as well.
 <br>
-<b>generate-back</b>, which is equivalent to <b>generate</b>, but inserts the *Rule* relation, which is what switches on a candidate rule within Souffle, at the front of each rule rather than the back. This increases the speed in which Souffle processes the candidate rules, since it reads rules from left to right.
+<b>generate-back</b>, which is equivalent to <b>generate</b>, but inserts the *Rule* relation, which is what switches on a candidate rule within Souffle, at the front of each rule rather than the back. This increases the speed in which Souffle compiles the candidate rules, since it reads rules from left to right.
 <br>
 <b>generate-negation</b>, which is equivalent to <b>generate</b>, but is capable of handling negation.
 <br>

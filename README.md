@@ -5,9 +5,7 @@ Its main purpose is to serve as a benchmark suite to evaluate techniques for lea
 Besides the target Datalog programs themselves, this collection includes input-output datasets for each program, as well as code to generate candidate rules using various methods of inducing syntactic bias, akin to syntax-guided synthesis (SyGuS) or template rules in meta-interpretive learning.
 
 ## 1. Rule Generation
-All rule generation algorithms produce candidate rule sets in the format supported by <a href="https://souffle-lang.github.io/">Souffle</a>. We select a subset of these candidate rule sets as our final program.
-
-All rule generation algorithms can be found in the <b>rule-gen</b> folder. There are four variants:<br><br>
+All rule generation algorithms produce candidate rule sets in the format supported by <a href="https://souffle-lang.github.io/">Souffle</a>. We select a subset of these candidate rule sets as our final program. All rule generation algorithms can be found in the <b>rule-gen</b> folder. There are four variants:<br><br>
 <b>generate</b>, which is a standard brute-force rule generation algorithm. It first enumerates all possible combinations of relations and variables, then applies a number of filters to remove redundant and clearly incorrect rules. Notably, it filters any rules that have variables that match different types in different relations.
 <br>
 <b>generate-fast</b>, which, unlike <b>generate</b>, does not enumerate any rules whose types do not match the types of the relations, thus dramatically cutting down on the algorithm's runtime. However, this algorithm offers less control over the candidate rule set generated. The algorithm applies a number of filters to remove redundant and clearly incorrect rules as well.

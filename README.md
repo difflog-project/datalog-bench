@@ -1,3 +1,5 @@
+# Benchmark Suite for Interpretable Rule Learning
+
 DatalogBench is a collection of Datalog programs from the literature in various fields including databases, information retrieval, and program analysis.
 
 Its main purpose is to serve as a benchmark suite to evaluate techniques for learning Datalog programs from input-output data. This is an important problem studied in fields such as program synthesis and Inductive Logic Programming, with applications in a variety of domains such as bioinformatics, big-data analytics, natural language processing, networking, program analysis, and robotics.

@@ -1,5 +1,5 @@
-leg(X,Z) :- edge(X,Y), edge(Y,Z).
+leg(x, z) :- Edge(x, y), Edge(y, z).
 
-reachable(X,Y) :- edge(X,Y).
-reachable(X,Y) :- edge(X,Z), reachable(Z,Y).
-same_clique(X,Y) :- reachable(X,Y), reachable(Y,X).
+Reachable(x, y) :- Edge(x, y).
+Reachable(x, y) :- Edge(x, z), Reachable(z, y).
+SameClique(x, y) :- Reachable(x, y), Reachable(y, x).

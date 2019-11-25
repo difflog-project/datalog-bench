@@ -1,4 +1,4 @@
-parent(X,Y) :- mother(X,Y).
-parent(X,Y) :- father(X,Y).
-ancestor(X,Y) :- parent(X,Y).
-ancestor(X,Y) :- parent(X,Z), ancestor(Z,Y).
+Parent(x, y) :- Mother(x, y).
+Parent(x, y) :- Father(x, y).
+Ancestor(x, y) :- Parent(x, y).
+Ancestor(x, y) :- Parent(x, z), Ancestor(z, y).

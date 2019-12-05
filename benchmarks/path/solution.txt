@@ -1,2 +1,2 @@
-path(x, y) :- Edge(x, y).
-path(x, z) :- path(x, y), Edge(y, z).
+path(x, y) :- edge(x, y).
+path(x, z) :- path(x, y), edge(y, z).

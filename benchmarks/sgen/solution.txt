@@ -1,0 +1,2 @@
+sgen(x0, x2) :- parent(x0, x1), parent(x2, x1).
+sgen(x0, x3) :- parent(x0, x1), parent(x3, x2), sgen(x1, x2).

@@ -1,0 +1,6 @@
+rRH(x2, x1) :- MmethRet(x2, x3, x0), VH(x0, x1). 
+rRH(x3, x2) :- HFH(x0, x1, x2), rRH(x3, x0).
+rMH(x2, x1) :- MmethArg(x2, x3, x0), VH(x0, x1). 
+rMH(x3, x2) :- HFH(x0, x1, x2), rMH(x3, x0).
+rHH(x0, x2) :- HFH(x0, x1, x2).
+rHH(x3, x2) :- HFH(x0, x1, x2), rHH(x3, x0).

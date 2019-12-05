@@ -1,0 +1,4 @@
+pt(x0, x1) :- addr(x0, x1).
+pt(x0, x1) :- assgn(x0, x2), pt(x2, x1).
+pt(x0, x1) :- load(x0, x2), pt(x2, x3), pt(x3, x1).
+pt(x0, x1) :- pt(x2, x0), pt(x3, x1), store(x2, x3).

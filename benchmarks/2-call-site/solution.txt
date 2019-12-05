@@ -1,0 +1,4 @@
+heappointsto(x0, x1, x2) :- pointsto(x5, x6, x3, x0), pointsto(x5, x6, x4, x2), store(x3, x1, x4).
+pointsto(x2, x3, x0, x1) :- invocation(x2, x3, x1, x4, x5, x6), points_initial(x0, x1).
+pointsto(x0, x1, x2, x3) :- assign(x0, x1, x2, x4, x5, x6), pointsto(x4, x5, x6, x3).
+pointsto(x0, x1, x2, x3) :- heappointsto(x6, x5, x3), load(x4, x5, x2), pointsto(x0, x1, x4, x6).

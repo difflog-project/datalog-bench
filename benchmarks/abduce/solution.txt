@@ -1,0 +1,3 @@
+parent(x, y) :- father(x, y).
+parent(x, y) :- mother(x, y).
+grandparent(x, z) :- parent(x, y), parent(y, z).

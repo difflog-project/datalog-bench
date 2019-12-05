@@ -1,0 +1,5 @@
+pointsto_objcont(v2,v,h) :- points_initial(v,h),invocation(h,tgt),receiver_actual(tgt,v2).
+pointsto(t,v2,v,h) :- pointsto_objcont(v2,v,h),enclosing_type(v,t).
+pointsto(c2,c1,v1,h) :- assign(c2,c1,v1,c3,c4,v3),pointsto(c3,c4,v3,h).
+pointsto(c2,c,v2,h2) :- load(v1,f,v2),pointsto(c2,c,v1,h1),heappointsto(h1,f,h2).
+heappointsto(h1,f,h2) :- store(v1,f,v2),pointsto(c1,c2,v1,h1),pointsto(c1,c2,v2,h2).

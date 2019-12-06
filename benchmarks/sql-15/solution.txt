@@ -1,0 +1,6 @@
+
+twoclasses (s) :- enroll(s,c1), enroll(s,c2), class(c1,m),  class(c2,m), LT(c1, c2).
+
+
+A(s,c,m) :- enroll(s,c), class(c,m).
+two(s) :- A(s,c1,m), LT(c1,c2),  A(s, c2, m).

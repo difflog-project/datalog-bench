@@ -1,0 +1,6 @@
+
+# projection + 2 x filter-1
+output(yrq) :- input1(yrq, d1, d2), LE(d1), GE(d2).
+
+# chain-3 
+output(yrq) :- LE(d1), input1(yrq, d1, d2), GE(d2).

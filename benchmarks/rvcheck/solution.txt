@@ -1,0 +1,5 @@
+invent_CertFlow(x,l2) :- Certificate(x,l1), OpSucc(l1,l2).
+invent_VeriFlow(x,l2) :- Verify(x,l1), OpSucc(l1,l2).
+invent_CertCheck(l2) :- invent_CertFlow(x,l1), Check(x,l1), OpSucc(l1,l2).
+invent_VeriCheck(l2) :- invent_VeriFlow(x,l1), Check(x,l1), OpSucc(l1,l2).
+Correct(l) :- invent_CertCheck(l), invent_VeriCheck(l).

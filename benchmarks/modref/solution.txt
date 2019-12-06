@@ -1,0 +1,14 @@
+rMM(m,n) :- IM(i,n), MI(m,i).
+rMM(m,n) :- rMM(m,x), rMM(x,n).
+
+refStatField(m,f) :- MgetStatFldInst(m,_,f).
+refStatField(m,f) :- rMM(m,m2),refStatField(m2,f).
+
+modStatField(m,f) :- MputStatFldInst(m,f,_).
+modStatField(m,f) :- rMM(m,m2),modStatField(m2,f).
+
+refInstField(m,h,f) :- MgetInstFldInst(m,_,b,f),VH(b,h).
+refInstField(m,h,f) :- rMM(m,m1),refInstField(m1,h,f).
+
+modInstField(m,h,f) :- MputInstFldInst(m,b,f,_),VH(b,h).
+modInstField(m,h,f) :- rMM(m,m1),modInstField(m1,h,f).

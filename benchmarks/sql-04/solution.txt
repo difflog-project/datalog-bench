@@ -1,0 +1,4 @@
+
+out(company, demand) :- In(inv, demand, company, x), not_null(company).
+out(company, demand) :- In(inv, demand, x, company), not_null(company).
+

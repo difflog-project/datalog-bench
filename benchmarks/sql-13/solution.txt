@@ -1,0 +1,3 @@
+
+Out(id,item) :- A(id, item2), B(item, item2).
+

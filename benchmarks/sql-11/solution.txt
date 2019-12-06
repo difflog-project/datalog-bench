@@ -1,0 +1,12 @@
+
+
+Output(name) :- Student(key, name, level), junior(level), Enroll(key, cname), Class(cname, fid), Faculty(fid, fname), focus(fname).
+
+
+A(key,name) :- student(key, name, level), junior(level).
+
+F(fid) :- Faculty(fid, fname), focus(fname).
+C(cname) :- class(cname, fid), F(fid).
+K(key) :- entroll(key,cname), C(cname).
+Out(name) :- K(key), student(key, name, level), junior(level).
+

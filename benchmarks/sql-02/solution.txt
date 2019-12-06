@@ -1,0 +1,8 @@
+
+output(parent_id, name2) :- family(id, name, age, parent_id), family(parent_id, name2, age2, parent_id2).
+
+
+# split and simplify
+# filter(parent_id) :- family(id, name, age, parent_id).
+# output(id, name) :- family(id, name, age, parent_id), filter (id).
+

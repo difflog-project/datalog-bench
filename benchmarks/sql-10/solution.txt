@@ -1,0 +1,6 @@
+
+Out(pid, g1, g2) :- In(id1, pid, g1), In(id2, pid, g2), Lt(g1,g2). 
+
+# split and simplify
+In2 (pid, g) :- In(id, pid, name, g).
+Out(pid, g1, g2) :- In2(pid, g1), In2(pid, g2), g1 < g2.

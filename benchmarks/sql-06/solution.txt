@@ -1,0 +1,4 @@
+
+Out(id, name, id) :- Parent(id, name, unique_id).
+Out(id, name, pid) :- Child(id, name, pid).
+

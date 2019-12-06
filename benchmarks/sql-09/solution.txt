@@ -1,0 +1,4 @@
+output(i,c,s) :- input1(i,c,s), treat(s), input2(i2,c,s2), untreat(s2).
+
+A(c) :- input2(i,c,s), untreat(s).
+output(i,c,s) :- input1(i,c,s), treat(s), A(c).

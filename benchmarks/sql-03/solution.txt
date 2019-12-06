@@ -1,0 +1,2 @@
+out(Number, Value) :- In(X,Y,Number, Value).
+

@@ -1,0 +1,2 @@
+inflamation(x0) :- not_lumbar_pain(x0),urine_pushing(x0).
+inflamation(x0) :- nausea(x0),urine_pushing(x0).

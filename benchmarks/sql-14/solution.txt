@@ -1,0 +1,2 @@
+selected(plan) :- active(att),input1(id,plan,att,val),true(val).
+output(id,plan,att,val) :- selected(plan), input1(id,plan,att,val).

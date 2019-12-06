@@ -1,0 +1,4 @@
+ptsVT(A,B) :- HT(C,B), VH(A,C).
+reachableCast(A,B) :- McheckCastInst(C,D,A,B).
+badCast(A,B) :- ptsVT(A,C), notSub(C,B).
+unsafeDowncast(A,B) :- reachableCast(B,A), badCast(A,B).

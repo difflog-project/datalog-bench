@@ -1,0 +1,3 @@
+A(pid, cl) :- input2(pid, cl), isRed(cl).
+A(pid, cl) :- input2(pid, cl), isGreen(cl).
+Out(sname) :- input3(sid, sname), input1(sid, pid), A(pid, cl).

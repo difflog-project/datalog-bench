@@ -1,0 +1,3 @@
+A(s,c) :- input1(s,status,c), active(status).
+B(s,c) :- input1(s,status,c), inactive(status).
+Out(s,c1,c2) :- A(s,c1), B(s,c2).

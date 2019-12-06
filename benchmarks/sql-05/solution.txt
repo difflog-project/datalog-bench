@@ -1,0 +1,1 @@
+output(pname) :- input1(s,pid), input2(pid,pname).

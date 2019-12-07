@@ -1,4 +1,3 @@
-buildWall(x1,x0) :- inv(x1,x0),offset(x0).
-inv(x2,x1) :- buildWall(x0,x1),inv(x2,x0).
-inv(x2,x1) :- cont(x1),fetch(x2,x0:B),putOn(x0:B,x1).
-
+buildWall(x1, x0) :- inv(x1, x0), offset(x0).
+inv(x2, x1) :- buildWall(x0, x1), inv(x2, x0).
+inv(x2, x1) :- cont(x1), fetch(x2, x0), putOn(x0, x1).

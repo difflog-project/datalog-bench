@@ -1,11 +1,11 @@
-reptile(x0) :- has_covering(x0,x1),scales(x1).
-mammal(x0) :- has_covering(x0,x1),has_milk(x0).
+reptile(x0) :- has_covering(x0, x1), scales(x1).
+mammal(x0) :- has_covering(x0, x1), has_milk(x0).
 fish(x0) :- has_gills(x0).
-bird(x0) :- feathers(x1),has_covering(x0,x1).
+bird(x0) :- feathers(x1), has_covering(x0, x1).
 
 OR
 
-reptile(x0) :- has_covering(x0,x1),scales(x1).
-mammal(x0) :- has_covering(x0,x1),has_milk(x0).
-fish(x0) :- has_covering(x0,x1),has_gills(x0).
-bird(x0) :- feathers(x1),has_covering(x0,x1).
+reptile(x0) :- has_covering(x0, x1), scales(x1).
+mammal(x0) :- has_covering(x0, x1), has_milk(x0).
+fish(x0) :- has_covering(x0, x1), has_gills(x0).
+bird(x0) :- feathers(x1), has_covering(x0, x1).

@@ -1,0 +1,4 @@
+path(x, y) :- edge(x, y).
+path(x, z) :- path(x, y), edge(y, z).
+NSCC(x, y) :- path(x, y).
+NSCC(x, y) :- path(y, x).

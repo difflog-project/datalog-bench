@@ -1,0 +1,9 @@
+
+SELECT tt.*
+FROM topten tt
+INNER JOIN
+    (SELECT home, MAX(datetime) AS MaxDateTime
+    FROM topten
+    GROUP BY home) groupedtt 
+ON tt.home = groupedtt.home 
+AND tt.datetime = groupedtt.MaxDateTime

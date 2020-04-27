@@ -1,0 +1,5 @@
+
+SELECT @rank:=@rank+1 AS rank, itemID, COUNT(*) as ordercount
+  FROM orders
+  GROUP BY itemID
+  ORDER BY ordercount DESC;

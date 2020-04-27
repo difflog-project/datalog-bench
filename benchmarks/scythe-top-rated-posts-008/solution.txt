@@ -1,0 +1,6 @@
+
+SELECT Orders.OrderNumber, LineItems.Quantity, LineItems.Description
+FROM Orders
+    LEFT JOIN LineItems 
+    ON Orders.OrderID = LineItems.OrderID
+GROUP BY Orders.OrderNumber

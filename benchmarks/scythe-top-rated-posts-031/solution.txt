@@ -1,0 +1,8 @@
+
+SELECT t.id,
+       (SELECT COUNT(*)
+          FROM TABLE x
+         WHERE x.name <= t.name) AS position
+       t.name    
+  FROM TABLE t      
+ WHERE t.name = 'Beta'

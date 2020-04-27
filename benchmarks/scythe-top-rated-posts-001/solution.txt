@@ -1,0 +1,4 @@
+
+select SubjectID, concat(StudentName)
+from SubjectID
+group by SubjectID

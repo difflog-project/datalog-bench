@@ -1,0 +1,9 @@
+.decl student_page(arg_0: symbol)
+.output student_page
+.decl link_to(arg_0: symbol, arg_1: symbol, arg_2: symbol)
+.input link_to
+.decl has_paul(arg_0: symbol)
+.input has_paul
+.decl has_jame(arg_0: symbol)
+.input has_jame
+student_page(a) :-  link_to(b, c, a), has_paul(c), has_jame(c).

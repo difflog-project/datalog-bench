@@ -1,0 +1,96 @@
+.decl student_page(arg_0: symbol)
+.output student_page
+.decl has_home(arg_0: symbol)
+.input has_home
+.decl has_scienc(arg_0: symbol)
+.input has_scienc
+.decl has_graduat(arg_0: symbol)
+.input has_graduat
+.decl has_wednesdai(arg_0: symbol)
+.input has_wednesdai
+.decl has_univers(arg_0: symbol)
+.input has_univers
+.decl link_to(arg_0: symbol, arg_1: symbol, arg_2: symbol)
+.input link_to
+.decl has_net(arg_0: symbol)
+.input has_net
+.decl has_ta(arg_0: symbol)
+.input has_ta
+.decl has_neighborhooddepart(arg_0: symbol)
+.input has_neighborhooddepart
+.decl has_student(arg_0: symbol)
+.input has_student
+.decl has_connect(arg_0: symbol)
+.input has_connect
+.decl has_stuff(arg_0: symbol)
+.input has_stuff
+.decl has_movi(arg_0: symbol)
+.input has_movi
+.decl has_compress(arg_0: symbol)
+.input has_compress
+.decl has_phone(arg_0: symbol)
+.input has_phone
+.decl has_page(arg_0: symbol)
+.input has_page
+.decl has_contact(arg_0: symbol)
+.input has_contact
+.decl has_ai(arg_0: symbol)
+.input has_ai
+.decl has_homepag(arg_0: symbol)
+.input has_homepag
+.decl has_friend(arg_0: symbol)
+.input has_friend
+.decl has_distribut(arg_0: symbol)
+.input has_distribut
+.decl has_usa(arg_0: symbol)
+.input has_usa
+.decl has_don(arg_0: symbol)
+.input has_don
+.decl has_jame(arg_0: symbol)
+.input has_jame
+.decl has_neighborhoodprof(arg_0: symbol)
+.input has_neighborhoodprof
+.decl has_offic(arg_0: symbol)
+.input has_offic
+.decl has_neighborhoodplace(arg_0: symbol)
+.input has_neighborhoodplace
+.decl has_person(arg_0: symbol)
+.input has_person
+.decl has_man(arg_0: symbol)
+.input has_man
+.decl has_master(arg_0: symbol)
+.input has_master
+.decl has_chang(arg_0: symbol)
+.input has_chang
+.decl has_ph(arg_0: symbol)
+.input has_ph
+.decl has_internet(arg_0: symbol)
+.input has_internet
+.decl has_mark(arg_0: symbol)
+.input has_mark
+.decl has_de(arg_0: symbol)
+.input has_de
+.decl has_paul(arg_0: symbol)
+.input has_paul
+.decl has_email(arg_0: symbol)
+.input has_email
+
+student_page(a) :-  has_home(a), has_scienc(a), has_graduat(a), has_wednesdai(a), has_univers(a), link_to(b, a, c), link_to(d, e, c), has_net(a).
+student_page(a) :-  has_home(a), has_scienc(a), has_graduat(a), has_ta(a), link_to(b, a, c), link_to(d, e, c), has_neighborhooddepart(b).
+student_page(a) :-  has_home(a), has_scienc(a), has_student(a), has_univers(a), has_wednesdai(a), link_to(b, a, c), has_connect(a).
+student_page(a) :-  has_home(a), has_scienc(a), has_graduat(a), has_stuff(a), link_to(b, c, a), has_movi(a).
+student_page(a) :-  has_home(a), has_scienc(a), has_graduat(a), has_wednesdai(a), link_to(b, a, c), link_to(d, e, c), has_compress(a).
+student_page(a) :-  has_home(a), has_scienc(a), has_univers(a), has_phone(a), has_page(a), has_contact(a), link_to(b, c, a), has_ai(a).
+student_page(a) :-  has_home(a), has_scienc(a), has_graduat(a), has_homepag(a), link_to(b, a, c).
+student_page(a) :-  has_home(a), has_scienc(a), has_univers(a), link_to(b, a, c), has_friend(a), has_distribut(a).
+student_page(a) :-  has_home(a), has_scienc(a), has_usa(a), link_to(b, c, a), has_don(c), has_jame(c).
+student_page(a) :-  has_home(a), has_wednesdai(a), link_to(b, a, c), has_neighborhoodprof(b).
+student_page(a) :-  has_home(a), has_univers(a), has_offic(a), has_ai(a).
+student_page(a) :-  has_home(a), has_wednesdai(a), link_to(b, a, c), has_neighborhoodplace(b), link_to(d, a, c), has_person(a).
+student_page(a) :-  has_home(a), has_univers(a), link_to(b, a, a), link_to(c, a, d), has_man(a).
+student_page(a) :-  has_home(a), has_wednesdai(a), has_master(a), has_scienc(a), link_to(b, c, a), has_chang(c).
+student_page(a) :-  has_home(a), has_contact(a), has_ph(a), has_internet(a).
+student_page(a) :-  has_home(a), has_phone(a), has_contact(a), link_to(b, c, a), has_mark(c), has_graduat(c).
+student_page(a) :-  has_home(a), has_wednesdai(a), has_de(a), link_to(b, c, a), link_to(d, c, e), has_mark(c).
+student_page(a) :-  has_scienc(a), link_to(b, c, a), has_paul(c), has_mark(c), has_email(c).
+student_page(a) :-  link_to(b, c, a), has_jame(c), has_paul(c), has_graduat(c).

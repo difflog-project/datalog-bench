@@ -1,0 +1,10 @@
+.decl link_to(n: symbol, m: symbol, k: symbol)
+.input link_to
+.decl has_jame(a: symbol)
+.input has_jame
+.decl has_richard(b: symbol)
+.input has_richard
+.decl student_page(d: symbol)
+.output student_page
+
+student_page(x) :-  link_to(_, y, x), has_jame(y), has_richard(y).

@@ -1,0 +1,62 @@
+Elapsed time: 1.35228s
+#Clauses = 19
+student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_wednesdai(0), has_univers(0), link-to(1, 0, 2), link-to(3, 4, 2), has_net(0)
+student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_ta(0), link-to(1, 0, 2), link-to(3, 4, 2), has_neighborhooddepart(1)
+student_page(0) :-  has_home(0), has_scienc(0), has_student(0), has_univers(0), has_wednesdai(0), link-to(1, 0, 2), has_connect(0)
+student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_stuff(0), link-to(1, 2, 0), has_movi(0)
+student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_wednesdai(0), link-to(1, 0, 2), link-to(3, 4, 2), has_compress(0)
+student_page(0) :-  has_home(0), has_scienc(0), has_univers(0), has_phone(0), has_page(0), has_contact(0), link-to(1, 2, 0), has_ai(0)
+student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_homepag(0), link-to(1, 0, 2)
+student_page(0) :-  has_home(0), has_scienc(0), has_univers(0), link-to(1, 0, 2), has_friend(0), has_distribut(0)
+student_page(0) :-  has_home(0), has_scienc(0), has_usa(0), link-to(1, 2, 0), has_don(2), has_jame(2)
+student_page(0) :-  has_home(0), has_wednesdai(0), link-to(1, 0, 2), has_neighborhoodprof(1)
+student_page(0) :-  has_home(0), has_univers(0), has_offic(0), has_ai(0)
+student_page(0) :-  has_home(0), has_wednesdai(0), link-to(1, 0, 2), has_neighborhoodplace(1), link-to(3, 0, 2), has_person(0)
+student_page(0) :-  has_home(0), has_univers(0), link-to(1, 0, 0), link-to(2, 0, 3), has_man(0)
+student_page(0) :-  has_home(0), has_wednesdai(0), has_master(0), has_scienc(0), link-to(1, 2, 0), has_chang(2)
+student_page(0) :-  has_home(0), has_contact(0), has_ph(0), has_internet(0)
+student_page(0) :-  has_home(0), has_phone(0), has_contact(0), link-to(1, 2, 0), has_mark(2), has_graduat(2)
+student_page(0) :-  has_home(0), has_wednesdai(0), has_de(0), link-to(1, 2, 0), link-to(3, 2, 4), has_mark(2)
+student_page(0) :-  has_scienc(0), link-to(1, 2, 0), has_paul(2), has_mark(2), has_email(2)
+student_page(0) :-  link-to(1, 2, 0), has_jame(2), has_paul(2), has_graduat(2)
+Use positive test data (126) ...
+student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_wednesdai(0), has_univers(0), link-to(1, 0, 2), link-to(3, 4, 2), has_net(0): #uncovered=126
+student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_ta(0), link-to(1, 0, 2), link-to(3, 4, 2), has_neighborhooddepart(1): #uncovered=125
+student_page(0) :-  has_home(0), has_scienc(0), has_student(0), has_univers(0), has_wednesdai(0), link-to(1, 0, 2), has_connect(0): #uncovered=125
+student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_stuff(0), link-to(1, 2, 0), has_movi(0): #uncovered=123
+student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_wednesdai(0), link-to(1, 0, 2), link-to(3, 4, 2), has_compress(0): #uncovered=123
+student_page(0) :-  has_home(0), has_scienc(0), has_univers(0), has_phone(0), has_page(0), has_contact(0), link-to(1, 2, 0), has_ai(0) does not cover any test data
+student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_homepag(0), link-to(1, 0, 2): #uncovered=119
+student_page(0) :-  has_home(0), has_scienc(0), has_univers(0), link-to(1, 0, 2), has_friend(0), has_distribut(0): #uncovered=119
+student_page(0) :-  has_home(0), has_scienc(0), has_usa(0), link-to(1, 2, 0), has_don(2), has_jame(2): #uncovered=119
+student_page(0) :-  has_home(0), has_wednesdai(0), link-to(1, 0, 2), has_neighborhoodprof(1): #uncovered=119
+student_page(0) :-  has_home(0), has_univers(0), has_offic(0), has_ai(0): #uncovered=119
+student_page(0) :-  has_home(0), has_wednesdai(0), link-to(1, 0, 2), has_neighborhoodplace(1), link-to(3, 0, 2), has_person(0) does not cover any test data
+student_page(0) :-  has_home(0), has_univers(0), link-to(1, 0, 0), link-to(2, 0, 3), has_man(0): #uncovered=119
+student_page(0) :-  has_home(0), has_wednesdai(0), has_master(0), has_scienc(0), link-to(1, 2, 0), has_chang(2) does not cover any test data
+student_page(0) :-  has_home(0), has_contact(0), has_ph(0), has_internet(0): #uncovered=118
+student_page(0) :-  has_home(0), has_phone(0), has_contact(0), link-to(1, 2, 0), has_mark(2), has_graduat(2): #uncovered=118
+student_page(0) :-  has_home(0), has_wednesdai(0), has_de(0), link-to(1, 2, 0), link-to(3, 2, 4), has_mark(2) does not cover any test data
+student_page(0) :-  has_scienc(0), link-to(1, 2, 0), has_paul(2), has_mark(2), has_email(2) does not cover any test data
+student_page(0) :-  link-to(1, 2, 0), has_jame(2), has_paul(2), has_graduat(2): #uncovered=15
+Use negative test data (1080) ...
+student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_wednesdai(0), has_univers(0), link-to(1, 0, 2), link-to(3, 4, 2), has_net(0) does not cover any test data
+student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_ta(0), link-to(1, 0, 2), link-to(3, 4, 2), has_neighborhooddepart(1): #uncovered=1079
+student_page(0) :-  has_home(0), has_scienc(0), has_student(0), has_univers(0), has_wednesdai(0), link-to(1, 0, 2), has_connect(0): #uncovered=1079
+student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_stuff(0), link-to(1, 2, 0), has_movi(0): #uncovered=1076
+student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_wednesdai(0), link-to(1, 0, 2), link-to(3, 4, 2), has_compress(0) does not cover any test data
+student_page(0) :-  has_home(0), has_scienc(0), has_univers(0), has_phone(0), has_page(0), has_contact(0), link-to(1, 2, 0), has_ai(0): #uncovered=1075
+student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_homepag(0), link-to(1, 0, 2): #uncovered=1070
+student_page(0) :-  has_home(0), has_scienc(0), has_univers(0), link-to(1, 0, 2), has_friend(0), has_distribut(0): #uncovered=1069
+student_page(0) :-  has_home(0), has_scienc(0), has_usa(0), link-to(1, 2, 0), has_don(2), has_jame(2): #uncovered=1069
+student_page(0) :-  has_home(0), has_wednesdai(0), link-to(1, 0, 2), has_neighborhoodprof(1): #uncovered=1068
+student_page(0) :-  has_home(0), has_univers(0), has_offic(0), has_ai(0): #uncovered=1063
+student_page(0) :-  has_home(0), has_wednesdai(0), link-to(1, 0, 2), has_neighborhoodplace(1), link-to(3, 0, 2), has_person(0) does not cover any test data
+student_page(0) :-  has_home(0), has_univers(0), link-to(1, 0, 0), link-to(2, 0, 3), has_man(0): #uncovered=1062
+student_page(0) :-  has_home(0), has_wednesdai(0), has_master(0), has_scienc(0), link-to(1, 2, 0), has_chang(2) does not cover any test data
+student_page(0) :-  has_home(0), has_contact(0), has_ph(0), has_internet(0): #uncovered=1062
+student_page(0) :-  has_home(0), has_phone(0), has_contact(0), link-to(1, 2, 0), has_mark(2), has_graduat(2) does not cover any test data
+student_page(0) :-  has_home(0), has_wednesdai(0), has_de(0), link-to(1, 2, 0), link-to(3, 2, 4), has_mark(2): #uncovered=1062
+student_page(0) :-  has_scienc(0), link-to(1, 2, 0), has_paul(2), has_mark(2), has_email(2) does not cover any test data
+student_page(0) :-  link-to(1, 2, 0), has_jame(2), has_paul(2), has_graduat(2): #uncovered=1053
+#covered_test_positive=111, #covered_test_negative=27, #total_positive=126, #total_negative=1080, precision=0.804348, recall=0.880952

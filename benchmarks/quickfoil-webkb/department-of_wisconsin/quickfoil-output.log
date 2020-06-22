@@ -1,0 +1,95 @@
+Elapsed time: 6.31769s
+#Clauses = 30
+department-of(0, 1) :-  link-to(2, 0, 1), department(1), person(0)
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 0, 3)
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 5, 0)
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_individu(0), has_home(1), has_faculti(0)
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_individu(0), has_home(1), has_faculti(0)
+department-of(0, 1) :-  department(1), has_talk(1), has_contact(0), has_home(1), link-to(2, 3, 0), has_tuesdai(3)
+department-of(0, 1) :-  department(1), has_talk(1), has_contact(0), has_academ(1), link-to(2, 3, 0), has_tuesdai(3)
+department-of(0, 1) :-  department(1), has_talk(1), has_contact(0), has_thursdai(1), link-to(2, 3, 0), has_tuesdai(3)
+department-of(0, 1) :-  department(1), has_talk(1), has_contact(0), has_person(1), link-to(2, 3, 0), has_tuesdai(3)
+department-of(0, 1) :-  department(1), has_talk(1), has_contact(0), has_www(1), link-to(2, 3, 0), has_tuesdai(3)
+department-of(0, 1) :-  department(1), has_overview(1), has_contact(0), has_home(1), link-to(2, 3, 0), has_tuesdai(3)
+department-of(0, 1) :-  department(1), has_overview(1), has_contact(0), has_academ(1), link-to(2, 3, 0), has_tuesdai(3)
+department-of(0, 1) :-  department(1), has_overview(1), has_contact(0), has_person(1), link-to(2, 3, 0), has_tuesdai(3)
+department-of(0, 1) :-  department(1), has_overview(1), has_contact(0), has_thursdai(1), link-to(2, 3, 0), has_tuesdai(3)
+department-of(0, 1) :-  department(1), has_overview(1), has_contact(0), has_www(1), link-to(2, 3, 0), has_tuesdai(3)
+department-of(0, 1) :-  department(1), has_overview(1), has_sum(0), has_length(0), link-to(2, 0, 3), link-to(4, 3, 1)
+department-of(0, 1) :-  department(1), has_talk(1), has_sum(0), has_length(0), link-to(2, 0, 3), link-to(4, 3, 1)
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_averag(0), has_video(1)
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_averag(0), has_video(1)
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_frame(0), has_home(1), has_download(0)
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_frame(0), has_home(1), has_download(0)
+department-of(0, 1) :-  department(1), has_overview(1), person(0), link-to(2, 1, 3), link-to(4, 3, 0), has_neighborhoodsystem(4)
+department-of(0, 1) :-  department(1), has_talk(1), person(0), link-to(2, 1, 3), link-to(4, 3, 0), has_neighborhoodsystem(4)
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_robert(0), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1), student(0)
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_robert(0), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1), student(0)
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_travel(0), link-to(2, 0, 3), link-to(4, 5, 3), link-to(6, 5, 1)
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_travel(0), link-to(2, 0, 3), link-to(4, 5, 3), link-to(6, 5, 1)
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_exampl(0), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1)
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_exampl(0), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1)
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_log(0), has_home(1), has_home(0), has_check(0)
+Use positive test data (207) ...
+department-of(0, 1) :-  link-to(2, 0, 1), department(1), person(0): #uncovered=177
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 0, 3): #uncovered=148
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 5, 0): #uncovered=28
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_individu(0), has_home(1), has_faculti(0) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_individu(0), has_home(1), has_faculti(0) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), has_contact(0), has_home(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), has_contact(0), has_academ(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), has_contact(0), has_thursdai(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), has_contact(0), has_person(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), has_contact(0), has_www(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), has_contact(0), has_home(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), has_contact(0), has_academ(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), has_contact(0), has_person(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), has_contact(0), has_thursdai(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), has_contact(0), has_www(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), has_sum(0), has_length(0), link-to(2, 0, 3), link-to(4, 3, 1) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), has_sum(0), has_length(0), link-to(2, 0, 3), link-to(4, 3, 1) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_averag(0), has_video(1) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_averag(0), has_video(1) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_frame(0), has_home(1), has_download(0) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_frame(0), has_home(1), has_download(0) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), person(0), link-to(2, 1, 3), link-to(4, 3, 0), has_neighborhoodsystem(4) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), person(0), link-to(2, 1, 3), link-to(4, 3, 0), has_neighborhoodsystem(4) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_robert(0), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1), student(0) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_robert(0), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1), student(0) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_travel(0), link-to(2, 0, 3), link-to(4, 5, 3), link-to(6, 5, 1) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_travel(0), link-to(2, 0, 3), link-to(4, 5, 3), link-to(6, 5, 1) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_exampl(0), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_exampl(0), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_log(0), has_home(1), has_home(0), has_check(0) does not cover any test data
+Use negative test data (102834) ...
+department-of(0, 1) :-  link-to(2, 0, 1), department(1), person(0): #uncovered=102826
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 0, 3): #uncovered=102826
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 5, 0): #uncovered=102826
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_individu(0), has_home(1), has_faculti(0): #uncovered=102826
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_individu(0), has_home(1), has_faculti(0) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), has_contact(0), has_home(1), link-to(2, 3, 0), has_tuesdai(3): #uncovered=102821
+department-of(0, 1) :-  department(1), has_talk(1), has_contact(0), has_academ(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), has_contact(0), has_thursdai(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), has_contact(0), has_person(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), has_contact(0), has_www(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), has_contact(0), has_home(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), has_contact(0), has_academ(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), has_contact(0), has_person(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), has_contact(0), has_thursdai(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), has_contact(0), has_www(1), link-to(2, 3, 0), has_tuesdai(3) does not cover any test data
+department-of(0, 1) :-  department(1), has_overview(1), has_sum(0), has_length(0), link-to(2, 0, 3), link-to(4, 3, 1) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), has_sum(0), has_length(0), link-to(2, 0, 3), link-to(4, 3, 1): #uncovered=102821
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_averag(0), has_video(1) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_averag(0), has_video(1): #uncovered=102821
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_frame(0), has_home(1), has_download(0) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_frame(0), has_home(1), has_download(0): #uncovered=102821
+department-of(0, 1) :-  department(1), has_overview(1), person(0), link-to(2, 1, 3), link-to(4, 3, 0), has_neighborhoodsystem(4) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), person(0), link-to(2, 1, 3), link-to(4, 3, 0), has_neighborhoodsystem(4): #uncovered=102821
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_robert(0), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1), student(0): #uncovered=102821
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_robert(0), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1), student(0) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_travel(0), link-to(2, 0, 3), link-to(4, 5, 3), link-to(6, 5, 1): #uncovered=102819
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_travel(0), link-to(2, 0, 3), link-to(4, 5, 3), link-to(6, 5, 1) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_exampl(0), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1): #uncovered=102818
+department-of(0, 1) :-  department(1), has_overview(1), person(0), has_exampl(0), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1) does not cover any test data
+department-of(0, 1) :-  department(1), has_talk(1), person(0), has_log(0), has_home(1), has_home(0), has_check(0): #uncovered=102817
+#covered_test_positive=179, #covered_test_negative=17, #total_positive=207, #total_negative=102834, precision=0.913265, recall=0.864734

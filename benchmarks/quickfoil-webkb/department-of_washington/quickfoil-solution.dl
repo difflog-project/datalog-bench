@@ -1,0 +1,11 @@
+.decl department_of(arg_0: symbol, arg_1: symbol)
+.output department_of
+.decl department(arg_0: symbol)
+.input department
+.decl link_to(arg_0: symbol, arg_1: symbol, arg_2: symbol)
+.input link_to
+.decl has_faculti(arg_0: symbol)
+.input has_faculti
+.decl person(arg_0: symbol)
+.input person
+department_of(a, b) :-  department(b), link_to(c, d, a), link_to(e, d, f), link_to(g, f, b), has_faculti(b), person(a).

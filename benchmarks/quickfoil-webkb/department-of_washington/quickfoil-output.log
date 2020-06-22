@@ -1,0 +1,8 @@
+Elapsed time: 1.78001s
+#Clauses = 1
+department-of(0, 1) :-  department(1), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1), has_faculti(1), person(0)
+Use positive test data (161) ...
+department-of(0, 1) :-  department(1), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1), has_faculti(1), person(0): #uncovered=6
+Use negative test data (70595) ...
+department-of(0, 1) :-  department(1), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1), has_faculti(1), person(0): #uncovered=70588
+#covered_test_positive=155, #covered_test_negative=7, #total_positive=161, #total_negative=70595, precision=0.95679, recall=0.962733

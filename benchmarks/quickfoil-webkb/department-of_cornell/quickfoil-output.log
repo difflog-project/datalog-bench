@@ -1,0 +1,23 @@
+Elapsed time: 1.71273s
+#Clauses = 6
+department-of(0, 1) :-  department(1), link-to(2, 0, 1), person(0)
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), has_home(1), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 0, 3)
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), has_www(1), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 0, 3)
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), has_relat(1), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 0, 3)
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 5, 0)
+department-of(0, 1) :-  department(1), has_overview(1), link-to(2, 3, 0), link-to(4, 5, 3), link-to(6, 1, 5), person(0)
+Use positive test data (183) ...
+department-of(0, 1) :-  department(1), link-to(2, 0, 1), person(0): #uncovered=129
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), has_home(1), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 0, 3): #uncovered=120
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), has_www(1), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 0, 3): #uncovered=120
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), has_relat(1), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 0, 3) does not cover any test data
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 5, 0): #uncovered=14
+department-of(0, 1) :-  department(1), has_overview(1), link-to(2, 3, 0), link-to(4, 5, 3), link-to(6, 1, 5), person(0) does not cover any test data
+Use negative test data (61321) ...
+department-of(0, 1) :-  department(1), link-to(2, 0, 1), person(0): #uncovered=61306
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), has_home(1), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 0, 3): #uncovered=61306
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), has_www(1), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 0, 3): #uncovered=61306
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), has_relat(1), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 0, 3) does not cover any test data
+department-of(0, 1) :-  department(1), has_faculti(1), person(0), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 5, 0): #uncovered=61305
+department-of(0, 1) :-  department(1), has_overview(1), link-to(2, 3, 0), link-to(4, 5, 3), link-to(6, 1, 5), person(0) does not cover any test data
+#covered_test_positive=169, #covered_test_negative=16, #total_positive=183, #total_negative=61321, precision=0.913514, recall=0.923497

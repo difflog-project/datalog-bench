@@ -1,4 +1,4 @@
-Elapsed time: 6.31769s
+Elapsed time: 16.5342s
 #Clauses = 30
 department-of(0, 1) :-  link-to(2, 0, 1), department(1), person(0)
 department-of(0, 1) :-  department(1), has_faculti(1), person(0), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 0, 3)
@@ -92,4 +92,4 @@ department-of(0, 1) :-  department(1), has_overview(1), person(0), has_travel(0)
 department-of(0, 1) :-  department(1), has_talk(1), person(0), has_exampl(0), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1): #uncovered=102818
 department-of(0, 1) :-  department(1), has_overview(1), person(0), has_exampl(0), link-to(2, 3, 0), link-to(4, 3, 5), link-to(6, 5, 1) does not cover any test data
 department-of(0, 1) :-  department(1), has_talk(1), person(0), has_log(0), has_home(1), has_home(0), has_check(0): #uncovered=102817
-#covered_test_positive=179, #covered_test_negative=17, #total_positive=207, #total_negative=102834, precision=0.913265, recall=0.864734
+#covered_test_positive=179, #covered_test_negative=17, #total_positive=207, #total_negative=102834, precision=0.913265, recall=0.864734, f1score=0.888337

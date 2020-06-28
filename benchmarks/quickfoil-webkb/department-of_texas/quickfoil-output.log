@@ -1,4 +1,4 @@
-Elapsed time: 1.29813s
+Elapsed time: 3.41274s
 #Clauses = 4
 department-of(0, 1) :-  department(1), link-to(2, 0, 1), person(0), has_faculti(1)
 department-of(0, 1) :-  department(1), link-to(2, 0, 1), person(0), has_undergradu(1)
@@ -14,4 +14,4 @@ department-of(0, 1) :-  department(1), link-to(2, 0, 1), person(0), has_faculti(
 department-of(0, 1) :-  department(1), link-to(2, 0, 1), person(0), has_undergradu(1): #uncovered=64318
 department-of(0, 1) :-  department(1), has_faculti(1), person(0), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 0, 3): #uncovered=64318
 department-of(0, 1) :-  department(1), has_faculti(1), person(0), link-to(2, 1, 3), link-to(4, 5, 3), link-to(6, 5, 0): #uncovered=64318
-#covered_test_positive=71, #covered_test_negative=1, #total_positive=197, #total_negative=64319, precision=0.986111, recall=0.360406
+#covered_test_positive=71, #covered_test_negative=1, #total_positive=197, #total_negative=64319, precision=0.986111, recall=0.360406, f1score=0.527881

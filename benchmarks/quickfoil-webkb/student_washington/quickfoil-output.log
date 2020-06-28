@@ -1,4 +1,4 @@
-Elapsed time: 1.35228s
+Elapsed time: 3.08884s
 #Clauses = 19
 student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_wednesdai(0), has_univers(0), link-to(1, 0, 2), link-to(3, 4, 2), has_net(0)
 student_page(0) :-  has_home(0), has_scienc(0), has_graduat(0), has_ta(0), link-to(1, 0, 2), link-to(3, 4, 2), has_neighborhooddepart(1)
@@ -59,4 +59,4 @@ student_page(0) :-  has_home(0), has_phone(0), has_contact(0), link-to(1, 2, 0),
 student_page(0) :-  has_home(0), has_wednesdai(0), has_de(0), link-to(1, 2, 0), link-to(3, 2, 4), has_mark(2): #uncovered=1062
 student_page(0) :-  has_scienc(0), link-to(1, 2, 0), has_paul(2), has_mark(2), has_email(2) does not cover any test data
 student_page(0) :-  link-to(1, 2, 0), has_jame(2), has_paul(2), has_graduat(2): #uncovered=1053
-#covered_test_positive=111, #covered_test_negative=27, #total_positive=126, #total_negative=1080, precision=0.804348, recall=0.880952
+#covered_test_positive=111, #covered_test_negative=27, #total_positive=126, #total_negative=1080, precision=0.804348, recall=0.880952, f1score=0.840909

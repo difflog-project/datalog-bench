@@ -1,8 +1,8 @@
-Elapsed time: 0.0671431s
+Elapsed time: 0.141429s
 #Clauses = 1
 student_page(0) :-  link-to(1, 2, 0), has_jame(2), has_richard(2)
 Use positive test data (156) ...
 student_page(0) :-  link-to(1, 2, 0), has_jame(2), has_richard(2): #uncovered=4
 Use negative test data (1111) ...
 student_page(0) :-  link-to(1, 2, 0), has_jame(2), has_richard(2): #uncovered=1049
-#covered_test_positive=152, #covered_test_negative=62, #total_positive=156, #total_negative=1111, precision=0.71028, recall=0.974359
+#covered_test_positive=152, #covered_test_negative=62, #total_positive=156, #total_negative=1111, precision=0.71028, recall=0.974359, f1score=0.821622

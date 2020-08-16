@@ -1,0 +1,5 @@
+*addr(V,V)
+*assgn(V,V)
+*load(V,V)
+*store(V,V)
+pt(V,V)

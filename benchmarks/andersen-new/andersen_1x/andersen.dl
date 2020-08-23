@@ -1,0 +1,28 @@
+.type A
+
+.decl addr(v0: A, v1: A)
+.input addr
+
+.decl assgn(v0: A, v1: A)
+.input assgn
+
+.decl store(v0: A, v1: A)
+.input store
+
+.decl load(v0:A, v1: A)
+.input load
+
+.decl pt(v0: A, v1: A)
+.output pt
+
+.decl notpt(v0: A, v1: A)
+.output notpt
+
+.decl nodes(v0: A)
+.input nodes
+
+pt(x0, x1) :- addr(x0, x1).
+pt(x0, x1) :- assgn(x0, x2), pt(x2, x1).
+pt(x0, x1) :- load(x0, x2), pt(x2, x3), pt(x3, x1).
+pt(x0, x1) :- pt(x2, x0), pt(x3, x1), store(x2, x3).
+notpt(x0, x1) :- !pt(x0, x1), nodes(x0), nodes(x1).

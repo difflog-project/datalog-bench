@@ -1,0 +1,4 @@
+metarule([Q, P], [P, X, Y], [[Q, X, Y]]).
+metarule([Q, P], [P, X, Y], [[P, Z, Y], [Q, X, Z]]).
+metarule([Q, P], [P, X, Y], [[P, W, Y], [Q, X, Z], [P, Z, W]]).
+metarule([Q, P], [P, X, Y], [[P, W, Y], [P, Z, X], [Q, Z, W]]).

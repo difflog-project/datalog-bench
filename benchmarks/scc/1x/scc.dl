@@ -1,0 +1,12 @@
+.type N
+.decl edge(v0: N, v1: N)
+.input edge
+
+.decl path(v0: N, v1: N)
+
+.decl scc(v0: N, v1: N)
+.output scc
+
+path(x, y) :- edge(x, y).
+path(x, z) :- path(x, y), edge(y, z).
+scc(x, y) :- path(x, y), path(y, x).
